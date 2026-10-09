@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tekchandji | Private Merchant Banking & Generational Capital</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        imperial: {
+                            50: '#FDFCF7',
+                            100: '#FAF5E8',
+                            200: '#F4E7CB',
+                            300: '#EBD4A5',
+                            400: '#DFBE79',
+                            500: '#CCA049',
+                            600: '#B28231',
+                            700: '#8E6221',
+                            800: '#674415',
+                            900: '#3D270A',
+                        },
+                        ivory: '#FCFBF7',
+                        alabaster: '#F7F6F0',
+                        charcoal: '#111215',
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'gilded': '0 20px 40px -15px rgba(204, 160, 73, 0.18), 0 0 15px 1px rgba(204, 160, 73, 0.08)',
+                        'regal': '0 30px 60px -15px rgba(27, 25, 22, 0.08), 0 10px 20px -5px rgba(204, 160, 73, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gilded-text {
+            background: linear-gradient(135deg, #9C7227 0%, #D8B263 35%, #F5DE9C 60%, #9C7227 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border-gradient {
+            border-image: linear-gradient(to right, #B28231, #F4E7CB, #B28231) 1;
+        }
+        .imperial-sheen {
+            background-color: #FFFFFF;
+            background-image: 
+                radial-gradient(at 15% 10%, rgba(223, 190, 121, 0.08) 0px, transparent 50%),
+                radial-gradient(at 85% 15%, rgba(244, 231, 203, 0.25) 0px, transparent 60%),
+                radial-gradient(at 50% 50%, rgba(253, 252, 247, 0.7) 0px, transparent 70%),
+                radial-gradient(at 90% 85%, rgba(178, 130, 49, 0.06) 0px, transparent 50%);
+        }
+        .gold-card-mirror {
+            background: linear-gradient(135deg, #18191D 0%, #22252C 40%, #15161A 100%);
+            border: 1px solid rgba(223, 190, 121, 0.45);
+        }
+        .gold-leaf {
+            background: linear-gradient(135deg, #CCA049 0%, #F5DE9C 50%, #B28231 100%);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FCFBF7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #CCA049;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-[#FDFCF9] text-stone-800 font-sans selection:bg-imperial-500/20 selection:text-imperial-900">
+
+    <!-- Top Dispatch & Gold Price Bar -->
+    <div class="border-b border-imperial-200/50 bg-white/95 backdrop-blur-md text-[11px] text-stone-600 py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-3">
+            <div class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-imperial-600"></span>
+                <span class="font-serif tracking-widest uppercase font-semibold text-stone-900 text-[12px]">TEKCHANDJI HERITAGE TRUST & PRIVATE BANKING</span>
+                <span class="text-imperial-600 font-medium hidden sm:inline">• ESTABLISHED REPUTATION FOR EXCELLENCE</span>
+            </div>
+            <div class="flex items-center gap-5 text-[11px] font-mono text-stone-500">
+                <span>AU (GOLD): $2,654.80/oz</span>
+                <span class="hidden md:inline">PRIVATE REPO RATE: 5.42%</span>
+                <span class="text-imperial-700 font-semibold font-sans">CONCIERGE DESK: ACTIVE</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/85 backdrop-blur-xl border-b border-stone-200/60 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-22 flex items-center justify-between">
+            <!-- Brand Crest & Monogram -->
+            <a href="#" class="flex items-center gap-3.5 group">
+                <div class="w-12 h-12 rounded-full border border-imperial-400 bg-gradient-to-br from-imperial-50 via-white to-imperial-100 flex items-center justify-center shadow-sm group-hover:scale-105 transition duration-300">
+                    <span class="font-serif text-2xl font-bold gilded-text italic">T</span>
+                </div>
+                <div>
+                    <span class="font-serif text-2xl font-bold tracking-[0.18em] text-stone-950 block leading-tight">TEKCHANDJI</span>
+                    <span class="text-[9px] uppercase tracking-[0.35em] text-imperial-600 font-semibold block">Merchant Banking & Private Capital</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-9 text-sm font-medium text-stone-600">
+                <a href="#heritage" class="hover:text-imperial-700 transition">Generational Wealth</a>
+                <a href="#services" class="hover:text-imperial-700 transition">Private Banking</a>
+                <a href="#imperial-card" class="hover:text-imperial-700 transition">Imperial Card</a>
+                <a href="#calculator" class="hover:text-imperial-700 transition">Legacy Calculator</a>
+                <a href="#trust" class="hover:text-imperial-700 transition">Fiduciary Vaults</a>
+            </nav>
+
+            <!-- CTA Actions -->
+            <div class="flex items-center gap-4">
+                <button onclick="openDiwanModal()" class="hidden sm:inline-flex text-xs uppercase tracking-wider font-semibold text-stone-700 hover:text-imperial-700 transition py-2 px-3">
+                    Diwan Portal
+                </button>
+                <button onclick="openConsultationModal()" class="px-6 py-2.5 rounded-full gold-leaf text-stone-950 font-bold text-xs uppercase tracking-widest shadow-gilded hover:shadow-regal hover:scale-[1.02] transition duration-200">
+                    Request Audience
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="imperial-sheen relative pt-16 pb-24 lg:pt-24 lg:pb-32 overflow-hidden border-b border-stone-200/60">
+        <!-- Ambient Warm Glows -->
+        <div class="absolute top-10 right-1/4 w-[600px] h-[350px] bg-gradient-to-br from-imperial-200/30 to-amber-100/30 blur-3xl -z-10 rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-14 items-center">
+                <!-- Left Narrative -->
+                <div class="lg:col-span-7 space-y-8">
+                    <!-- Crest Badge -->
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-imperial-300 bg-white/80 shadow-sm text-stone-800 text-xs font-semibold uppercase tracking-widest">
+                        <span class="text-imperial-600 font-serif italic text-base">§</span>
+                        <span>Where Legacy Meets Sovereign Liquidity</span>
+                    </div>
+
+                    <!-- Grand Headline -->
+                    <div class="space-y-4">
+                        <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-stone-950 tracking-tight leading-[1.08]">
+                            Generational Wealth. <br>
+                            <span class="gilded-text italic font-normal">Modern Mastery.</span>
+                        </h1>
+                        <p class="text-lg sm:text-xl text-stone-600 font-light max-w-2xl leading-relaxed">
+                            Tekchandji combines centuries of timeless merchant stewardship with state-of-the-art fintech infrastructure. Tailored for family patriarchs, visionary entrepreneurs, and multi-generational estates.
+                        </p>
+                    </div>
+
+                    <!-- Highlight Pillars -->
+                    <div class="grid grid-cols-3 gap-6 pt-2 pb-2 border-y border-stone-200/80 max-w-xl">
+                        <div>
+                            <span class="block font-serif text-3xl font-bold text-stone-900">$24B+</span>
+                            <span class="text-[11px] uppercase tracking-wider text-stone-500 font-medium">Family Assets Administered</span>
+                        </div>
+                        <div>
+                            <span class="block font-serif text-3xl font-bold text-stone-900">100%</span>
+                            <span class="text-[11px] uppercase tracking-wider text-stone-500 font-medium">Allocated Reserve Backing</span>
+                        </div>
+                        <div>
+                            <span class="block font-serif text-3xl font-bold text-imperial-600">3rd Gen</span>
+                            <span class="text-[11px] uppercase tracking-wider text-stone-500 font-medium">Continuous Lineage</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Row -->
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <button onclick="openConsultationModal()" class="px-8 py-4 rounded-xl gold-leaf text-stone-950 font-bold text-xs uppercase tracking-widest shadow-gilded hover:scale-105 transition duration-200 flex items-center gap-3">
+                            <span>Open A Private Account</span>
+                            <svg class="w-4 h-4 text-stone-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </button>
+                        <a href="#calculator" class="px-7 py-4 rounded-xl bg-white border border-imperial-300 text-stone-800 font-semibold text-xs uppercase tracking-widest hover:border-imperial-500 transition duration-200 shadow-sm flex items-center gap-2">
+                            <span>Project Generational Growth</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Accreditations -->
+                    <div class="flex items-center gap-8 text-xs text-stone-500 pt-1">
+                        <div class="flex items-center gap-2">
+                            <span class="text-imperial-600 font-serif font-bold text-base">✓</span>
+                            <span>Statutory Protected Trusts</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-imperial-600 font-serif font-bold text-base">✓</span>
+                            <span>Global Merchant Escrow Licensure</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual: The Tekchandji Digital Family Office Hub -->
+                <div class="lg:col-span-5 relative">
+                    <div class="absolute -inset-3 bg-gradient-to-br from-imperial-300 via-amber-200 to-yellow-200 rounded-3xl blur-2xl opacity-40 -z-10"></div>
+
+                    <!-- Glass Vault Card -->
+                    <div class="bg-white rounded-2xl border border-imperial-200 p-7 shadow-2xl relative backdrop-blur-md">
+                        <!-- Top Crest Bar -->
+                        <div class="flex justify-between items-center pb-5 border-b border-stone-100">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full border border-imperial-400 bg-imperial-50 flex items-center justify-center font-serif font-bold text-imperial-800 italic text-sm">
+                                    T
+                                </div>
+                                <div>
+                                    <span class="font-serif font-bold text-stone-900 text-sm block">TEKCHANDJI FAMILY DESK</span>
+                                    <span class="text-[9px] uppercase tracking-wider text-imperial-600 font-semibold">ESTATE PROTOCOL #TK-889</span>
+                                </div>
+                            </div>
+                            <span class="text-[10px] uppercase font-mono bg-imperial-50 text-imperial-800 px-2.5 py-1 rounded-full font-bold border border-imperial-200">ACTIVE TRUST</span>
+                        </div>
+
+                        <!-- Estate Valuation -->
+                        <div class="py-5">
+                            <span class="text-[11px] font-semibold uppercase tracking-wider text-stone-400">Total Net Estate Valuation</span>
+                            <div class="flex items-baseline gap-2 mt-1">
+                                <span class="font-serif text-4xl font-bold text-stone-900">$142,600,000</span>
+                                <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">+9.8% YoY</span>
+                            </div>
+                            <span class="text-[11px] text-stone-400 mt-0.5 block">Discretionary Wealth & Merchant Liquidity Trust</span>
+                        </div>
+
+                        <!-- Portfolio Holdings Visual -->
+                        <div class="space-y-3 pt-2">
+                            <div class="text-[11px] font-semibold uppercase tracking-wider text-stone-400">Allocated Wealth Segments</div>
+                            
+                            <div class="bg-alabaster p-3 rounded-xl border border-stone-100 space-y-2.5 text-xs">
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-2.5 h-2.5 rounded-full bg-imperial-600"></div>
+                                        <span class="font-medium text-stone-800">Physical Gold Bullion (Vaulted in Zurich)</span>
+                                    </div>
+                                    <span class="font-mono font-semibold text-stone-900">$57,040,000 (40%)</span>
+                                </div>
+                                <div class="w-full bg-stone-200 h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-imperial-600 h-full w-[40%] rounded-full"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-alabaster p-3 rounded-xl border border-stone-100 space-y-2.5 text-xs">
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-2.5 h-2.5 rounded-full bg-stone-800"></div>
+                                        <span class="font-medium text-stone-800">Private Merchant Credit & Trade Finance</span>
+                                    </div>
+                                    <span class="font-mono font-semibold text-stone-900">$49,910,000 (35%)</span>
+                                </div>
+                                <div class="w-full bg-stone-200 h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-stone-800 h-full w-[35%] rounded-full"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-alabaster p-3 rounded-xl border border-stone-100 space-y-2.5 text-xs">
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-2.5 h-2.5 rounded-full bg-emerald-600"></div>
+                                        <span class="font-medium text-stone-800">Sovereign Treasury Cash Equivalents</span>
+                                    </div>
+                                    <span class="font-mono font-semibold text-stone-900">$35,650,000 (25%)</span>
+                                </div>
+                                <div class="w-full bg-stone-200 h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-emerald-600 h-full w-[25%] rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card Footer Indicator -->
+                        <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-xs">
+                            <span class="text-stone-500">Dedicated Managing Partner</span>
+                            <span class="font-serif font-bold text-imperial-800">Shri R. Tekchandji</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Heritage Trust Marquee -->
+    <section class="py-12 bg-white border-b border-stone-200/60">
+        <div class="max-w-7xl mx-auto px-6">
+            <p class="text-center text-[11px] uppercase tracking-[0.3em] font-semibold text-stone-400 mb-8">
+                Safeguarding Multi-Generational Fortunes Across Key Capital Capitals
+            </p>
+            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 text-stone-700 opacity-80">
+                <span class="font-serif text-lg tracking-widest font-semibold">MUMBAI PRIVATE DESK</span>
+                <span class="font-serif text-lg tracking-widest font-semibold">DUBAI DIFC CUSTODY</span>
+                <span class="font-serif text-lg tracking-widest font-semibold">SINGAPORE VCC RAILS</span>
+                <span class="font-serif text-lg tracking-widest font-semibold">LONDON MAYFAIR TRUST</span>
+                <span class="font-serif text-lg tracking-widest font-semibold">GENEVA FREEPORT BULLION</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Capabilities Grid -->
+    <section id="services" class="py-24 bg-alabaster border-b border-stone-200/60">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-xs uppercase tracking-[0.3em] font-bold text-imperial-600 block">The Tekchandji Disciplines</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-stone-900">
+                    Bespoke Financial Architecture for Estates & Dynasties
+                </h2>
+                <p class="text-stone-600 font-light text-base sm:text-lg">
+                    We bridge timeless family office values with digital merchant rails, offering unmatched asset isolation and real-time capital mobility.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Pillar 1 -->
+                <div class="bg-white rounded-2xl p-8 border border-stone-200 hover:border-imperial-300 shadow-sm hover:shadow-regal hover:-translate-y-1 transition duration-300 group">
+                    <div class="w-14 h-14 rounded-full bg-imperial-50 border border-imperial-200 flex items-center justify-center mb-6 text-imperial-700 font-serif font-bold text-2xl group-hover:bg-imperial-500 group-hover:text-white transition">
+                        I
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-stone-900 mb-3">Merchant Capital & Cross-Border Escrow</h3>
+                    <p class="text-sm text-stone-600 leading-relaxed mb-6">
+                        Rapid, high-volume settlement for real estate acquisitions, commodity transactions, and private corporate buyouts with zero counterparty risk.
+                    </p>
+                    <ul class="space-y-2 text-xs text-stone-500">
+                        <li class="flex items-center gap-2"><span class="text-imperial-600">✦</span> Instant multi-jurisdictional escrow</li>
+                        <li class="flex items-center gap-2"><span class="text-imperial-600">✦</span> Direct bullion exchange liquidity</li>
+                        <li class="flex items-center gap-2"><span class="text-imperial-600">✦</span> Complete privacy & discretionary routing</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="bg-white rounded-2xl p-8 border border-stone-200 hover:border-imperial-300 shadow-sm hover:shadow-regal hover:-translate-y-1 transition duration-300 group">
+                    <div class="w-14 h-14 rounded-full bg-imperial-50 border border-imperial-200 flex items-center justify-center mb-6 text-imperial-700 font-serif font-bold text-2xl group-hover:bg-imperial-500 group-hover:text-white transition">
+                        II
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-stone-900 mb-3">Family Trust & Dynastic Succession</h3>
+                    <p class="text-sm text-stone-600 leading-relaxed mb-6">
+                        Structured governance protocols designed to protect capital across three or more generations, insulating wealth against probate and tax dilution.
+                    </p>
+                    <ul class="space-y-2 text-xs text-stone-500">
+                        <li class="flex items-center gap-2"><span class="text-imperial-600">✦</span> Multi-generational trust deeds</li>
+                        <li class="flex items-center gap-2"><span class="text-imperial-600">✦</span> Smart-contract conditional dispensations</li>
+                        <li class="flex items-center gap-2"><span class="text-imperial-600">✦</span> Global tax treaty optimization</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="bg-white rounded-2xl p-8 border border-stone-200 hover:border-imperial-300 shadow-sm hover:shadow-regal hover:-translate-y-1 transition duration-300 group">
+                    <div class="w-14 h-14 rounded-full bg-imperial-50 border border-imperial-200 flex items-center justify-center mb-6 text-imperial-700 font-serif font-bold text-2xl group-hover:bg-imperial-500 group-hover:text-white transition">
+                        III
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-stone-900 mb-3">Private Debt & Secured Yield Notes</h3>
+                    <p class="text-sm text-stone-600 leading-relaxed mb-6">
+                        Access exclusive, asset-backed private credit facilities secured against prime real estate, luxury inventory, and sovereign sovereign paper.
+                    </p>
+                    <ul class="space-y-2 text-xs text-stone-500">
+                        <li class="flex items-center gap-2"><span class="text-imperial-600">✦</span> Over-collateralized lending corridors</li>
+                        <li class="flex items-center gap-2"><span class="text-imperial-600">✦</span> 8% - 11% consistent target yields</li>
+                        <li class="flex items-center gap-2"><span class="text-imperial-600">✦</span> Priority seniority liens on all deals</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Tekchandji Imperial Gold Card -->
+    <section id="imperial-card" class="py-24 bg-white border-b border-stone-200/60 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-14 items-center">
+                <!-- Physical Card Simulation -->
+                <div class="lg:col-span-6 flex justify-center">
+                    <div class="relative w-full max-w-md group">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-amber-400 to-yellow-600 rounded-3xl blur-2xl opacity-20 group-hover:opacity-35 transition duration-500"></div>
+
+                        <!-- Card Body -->
+                        <div class="relative aspect-[1.586/1] w-full rounded-2xl gold-card-mirror p-8 text-white shadow-2xl flex flex-col justify-between overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                            <!-- Golden Filigree Corner Emblems -->
+                            <div class="absolute top-0 right-0 w-36 h-36 bg-[radial-gradient(circle_at_top_right,_rgba(223,190,121,0.2),_transparent_70%)]"></div>
+                            
+                            <!-- Header -->
+                            <div class="flex justify-between items-start z-10">
+                                <div>
+                                    <span class="font-serif tracking-[0.25em] text-sm text-imperial-300 font-bold block">TEKCHANDJI</span>
+                                    <span class="text-[8px] uppercase tracking-[0.3em] text-stone-400">IMPERIAL MERCHANT CARD</span>
+                                </div>
+                                <div class="w-11 h-8 rounded-md bg-gradient-to-r from-amber-300 to-yellow-500 border border-yellow-200 shadow flex items-center justify-center">
+                                    <div class="w-6 h-4 border border-amber-900/40 rounded-sm"></div>
+                                </div>
+                            </div>
+
+                            <!-- Card Number -->
+                            <div class="z-10 my-auto">
+                                <span class="font-mono tracking-[0.26em] text-lg sm:text-xl text-imperial-100">8891 •••• •••• 1928</span>
+                            </div>
+
+                            <!-- Footer -->
+                            <div class="flex justify-between items-end z-10">
+                                <div>
+                                    <span class="text-[8px] uppercase tracking-widest text-imperial-400 block">CARDHOLDER PATRIARCH</span>
+                                    <span class="font-serif tracking-widest text-sm font-semibold text-white">ANANDRAO TEKCHANDJI</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-[8px] uppercase tracking-widest text-stone-400 block">STANDARD</span>
+                                    <span class="font-serif tracking-widest text-xs font-bold text-amber-300">24K MIRROR GOLD</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Copy -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs uppercase tracking-[0.3em] font-bold text-imperial-600 block">Sovereign Purchasing Privilege</span>
+                    <h2 class="font-serif text-4xl sm:text-5xl font-bold text-stone-900 leading-tight">
+                        The Tekchandji Imperial Card
+                    </h2>
+                    <p class="text-stone-600 text-base leading-relaxed">
+                        Handcrafted with an authentic 24-karat gold mirror substrate. Linked directly to your family trust and private merchant escrow lines without pre-set spending limits.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-2">
+                        <div class="p-4 rounded-xl border border-stone-200 bg-alabaster">
+                            <span class="font-serif font-bold text-stone-900 text-lg block">No Spending Limit</span>
+                            <span class="text-xs text-stone-500">Backed by allocated bullion & trust reserves</span>
+                        </div>
+                        <div class="p-4 rounded-xl border border-stone-200 bg-alabaster">
+                            <span class="font-serif font-bold text-stone-900 text-lg block">Personal Diwan</span>
+                            <span class="text-xs text-stone-500">Dedicated private banker on direct call</span>
+                        </div>
+                        <div class="p-4 rounded-xl border border-stone-200 bg-alabaster">
+                            <span class="font-serif font-bold text-stone-900 text-lg block">Global Airport Lounges</span>
+                            <span class="text-xs text-stone-500">Unrestricted VIP tarmac & private jet suite access</span>
+                        </div>
+                        <div class="p-4 rounded-xl border border-stone-200 bg-alabaster">
+                            <span class="font-serif font-bold text-stone-900 text-lg block">0% Foreign Exchange</span>
+                            <span class="text-xs text-stone-500">Pure interbank bullion exchange pricing</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <button onclick="openConsultationModal()" class="px-6 py-3 rounded-lg border border-imperial-400 bg-imperial-50 text-imperial-900 font-semibold text-xs uppercase tracking-wider hover:bg-imperial-100 transition">
+                            Inquire for Card Minting
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Generational Wealth Calculator -->
+    <section id="calculator" class="py-24 bg-alabaster border-b border-stone-200/60">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-12 space-y-3">
+                <span class="text-xs uppercase tracking-[0.3em] font-bold text-imperial-600 block">Dynastic Wealth Compounding</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-stone-900">
+                    Generational Legacy Calculator
+                </h2>
+                <p class="text-stone-600 text-sm max-w-xl mx-auto">
+                    Simulate how family office trust structuring, combined with tax-shielded private credit and bullion compounding, expands capital across generations.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-3xl border border-imperial-200 p-8 sm:p-12 shadow-gilded">
+                <div class="grid md:grid-cols-12 gap-8 items-center">
+                    <!-- Left Inputs -->
+                    <div class="md:col-span-7 space-y-8">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-xs uppercase tracking-wider font-bold text-stone-700">Initial Family Capital (USD)</label>
+                                <span id="legacyDisplay" class="font-serif text-2xl font-bold text-imperial-700">$10,000,000</span>
+                            </div>
+                            <input id="legacySlider" type="range" min="2000000" max="100000000" step="1000000" value="10000000" class="w-full h-2.5 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-imperial-500">
+                            <div class="flex justify-between text-[11px] text-stone-400 mt-2 font-mono">
+                                <span>$2,000,000</span>
+                                <span>$50,000,000</span>
+                                <span>$100,000,000+</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-xs uppercase tracking-wider font-bold text-stone-700">Generational Horizon</label>
+                                <span id="timelineDisplay" class="text-xs font-semibold text-stone-800 bg-stone-100 px-3 py-1 rounded-full">25 Years (Next Generation)</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-3">
+                                <button onclick="setTimeline(10)" id="time10" class="time-btn py-2.5 px-2 text-xs font-semibold rounded-lg border border-stone-200 bg-white text-stone-600 hover:border-imperial-400 transition">
+                                    10 Years
+                                </button>
+                                <button onclick="setTimeline(25)" id="time25" class="time-btn py-2.5 px-2 text-xs font-semibold rounded-lg border border-imperial-500 bg-imperial-50 text-imperial-900 transition">
+                                    25 Years (Gen 2)
+                                </button>
+                                <button onclick="setTimeline(50)" id="time50" class="time-btn py-2.5 px-2 text-xs font-semibold rounded-lg border border-stone-200 bg-white text-stone-600 hover:border-imperial-400 transition">
+                                    50 Years (Dynasty)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Projected Results -->
+                    <div class="md:col-span-5 bg-stone-950 text-white p-7 rounded-2xl border border-imperial-400/50 space-y-6">
+                        <div>
+                            <span class="text-[10px] uppercase tracking-widest text-imperial-300 block font-semibold">PROJECTED DYNASTIC ESTATE</span>
+                            <span id="projectedEstateDisplay" class="font-serif text-3xl sm:text-4xl font-bold text-white block mt-1">$68,484,750</span>
+                            <span class="text-[11px] text-stone-400">Assuming 8.0% conservative blended annual compounding</span>
+                        </div>
+
+                        <div class="pt-4 border-t border-stone-800 space-y-2.5 text-xs">
+                            <div class="flex justify-between">
+                                <span class="text-stone-400">Estimated Gain:</span>
+                                <span id="gainDisplay" class="font-mono font-bold text-emerald-400">+$58,484,750</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-stone-400">Trust Probate Protection:</span>
+                                <span class="text-imperial-300 font-medium">100% Insulated</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-stone-400">Generational Governance:</span>
+                                <span class="text-stone-200">Deed Sealed</span>
+                            </div>
+                        </div>
+
+                        <button onclick="openConsultationModal()" class="w-full py-3 rounded-lg gold-leaf text-stone-950 font-bold text-xs uppercase tracking-widest hover:brightness-105 transition">
+                            Structure Your Estate Trust
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Heritage Trust & Compliance -->
+    <section id="trust" class="py-24 bg-white border-b border-stone-200/60">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-4">
+                    <span class="text-xs uppercase tracking-[0.3em] font-bold text-imperial-600 block">The Ironclad Standard</span>
+                    <h2 class="font-serif text-4xl font-bold text-stone-900">
+                        Uncompromising Fiduciary Sanctity
+                    </h2>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        At Tekchandji, family assets are never commingled. Every client entity holds dedicated statutory trust custody with legal separation recognized under common law and Swiss civil codes.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-7 grid sm:grid-cols-2 gap-6">
+                    <div class="border border-stone-200 rounded-xl p-6 bg-alabaster">
+                        <div class="w-10 h-10 rounded-full bg-imperial-100 text-imperial-800 flex items-center justify-center font-serif font-bold text-lg mb-4">
+                            §
+                        </div>
+                        <h4 class="font-serif font-bold text-stone-900 text-lg mb-1">Bankruptcy-Protected Trusts</h4>
+                        <p class="text-xs text-stone-500 leading-relaxed">
+                            Independent trust charters completely immune to systemic commercial banking insolvencies.
+                        </p>
+                    </div>
+
+                    <div class="border border-stone-200 rounded-xl p-6 bg-alabaster">
+                        <div class="w-10 h-10 rounded-full bg-imperial-100 text-imperial-800 flex items-center justify-center font-serif font-bold text-lg mb-4">
+                            Au
+                        </div>
+                        <h4 class="font-serif font-bold text-stone-900 text-lg mb-1">Allocated Physical Bullion</h4>
+                        <p class="text-xs text-stone-500 leading-relaxed">
+                            Serialized, London Bullion Market Association (LBMA) approved gold bars in deep alpine vaults.
+                        </p>
+                    </div>
+
+                    <div class="border border-stone-200 rounded-xl p-6 bg-alabaster">
+                        <div class="w-10 h-10 rounded-full bg-imperial-100 text-imperial-800 flex items-center justify-center font-serif font-bold text-lg mb-4">
+                            24
+                        </div>
+                        <h4 class="font-serif font-bold text-stone-900 text-lg mb-1">Direct Family Diwan Desk</h4>
+                        <p class="text-xs text-stone-500 leading-relaxed">
+                            A designated senior partner accessible 24/7/365 without call centers or automated attendants.
+                        </p>
+                    </div>
+
+                    <div class="border border-stone-200 rounded-xl p-6 bg-alabaster">
+                        <div class="w-10 h-10 rounded-full bg-imperial-100 text-imperial-800 flex items-center justify-center font-serif font-bold text-lg mb-4">
+                            🛡
+                        </div>
+                        <h4 class="font-serif font-bold text-stone-900 text-lg mb-1">Encrypted Merchant Rails</h4>
+                        <p class="text-xs text-stone-500 leading-relaxed">
+                            Cryptographically certified multi-sig release protocols with biometric physical verification.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Quote -->
+    <section class="py-24 bg-alabaster border-b border-stone-200/60">
+        <div class="max-w-4xl mx-auto px-6 text-center space-y-8">
+            <span class="text-xs uppercase tracking-[0.3em] font-bold text-imperial-600 block">Patron Testimonial</span>
+            <div class="font-serif text-3xl font-medium text-stone-900 italic leading-relaxed">
+                "Tekchandji has stewarded our family’s merchant holdings across Mumbai and London for over two decades. Their fusion of traditional honour and lightning-fast digital liquidity is unmatched."
+            </div>
+            <div>
+                <span class="font-serif font-bold text-stone-900 block text-lg">Dewan Vikramaditya Singhania</span>
+                <span class="text-xs text-stone-500 uppercase tracking-widest">Trustee, Singhania Heritage Conglomerate</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Invitation CTA -->
+    <section class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 text-center space-y-8 relative z-10">
+            <div class="w-16 h-16 rounded-full gold-leaf mx-auto flex items-center justify-center shadow-lg">
+                <span class="font-serif font-bold text-3xl text-stone-950 italic">T</span>
+            </div>
+            <h2 class="font-serif text-4xl sm:text-5xl font-bold text-stone-900">
+                Initiate A Confidential Dialogue
+            </h2>
+            <p class="text-stone-600 max-w-xl mx-auto text-base">
+                Engagements with Tekchandji begin with a confidential private audience with our managing partners.
+            </p>
+            <div>
+                <button onclick="openConsultationModal()" class="px-10 py-5 rounded-full gold-leaf text-stone-950 font-bold text-xs uppercase tracking-widest shadow-gilded hover:scale-105 transition duration-300">
+                    Schedule Private Consultation
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-stone-200 text-stone-500 text-xs py-16">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
+            <div class="space-y-4">
+                <div class="flex items-center gap-2">
+                    <span class="font-serif font-bold text-lg text-stone-900 tracking-wider">TEKCHANDJI</span>
+                </div>
+                <p class="text-[11px] leading-relaxed text-stone-400">
+                    Merchant banking, generational estate structuring, and multi-asset liquidity for distinguished families and institutional principals.
+                </p>
+                <div class="text-[10px] text-stone-400">
+                    © 2026 Tekchandji Private Merchant Bank Ltd. All rights reserved.
+                </div>
+            </div>
+
+            <div>
+                <span class="font-serif font-bold text-stone-900 block mb-4 uppercase tracking-wider text-xs">Family Desks</span>
+                <ul class="space-y-2 text-[11px]">
+                    <li>Mumbai: Nariman Point & BKC</li>
+                    <li>London: Berkeley Square, Mayfair</li>
+                    <li>Dubai: Gate Precinct, DIFC</li>
+                    <li>Geneva: Rue du Rhône</li>
+                </ul>
+            </div>
+
+            <div>
+                <span class="font-serif font-bold text-stone-900 block mb-4 uppercase tracking-wider text-xs">Divisions</span>
+                <ul class="space-y-2 text-[11px]">
+                    <li><a href="#services" class="hover:text-imperial-700 transition">Merchant Escrow Services</a></li>
+                    <li><a href="#services" class="hover:text-imperial-700 transition">Generational Trust Planning</a></li>
+                    <li><a href="#imperial-card" class="hover:text-imperial-700 transition">24K Gold Imperial Card</a></li>
+                    <li><a href="#calculator" class="hover:text-imperial-700 transition">Dynastic Wealth Calculator</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <span class="font-serif font-bold text-stone-900 block mb-4 uppercase tracking-wider text-xs">Fiduciary Disclosure</span>
+                <p class="text-[10px] leading-relaxed text-stone-400">
+                    Tekchandji operates as a private merchant trust and fiduciary services company. Banking relationships and clearing facilities are maintained through regulated statutory custodians in relevant sovereign jurisdictions.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Consultation Modal -->
+    <div id="consultationModal" class="fixed inset-0 bg-stone-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full border border-imperial-300 p-8 shadow-2xl relative">
+            <button onclick="closeConsultationModal()" class="absolute top-5 right-5 text-stone-400 hover:text-stone-800 text-xl font-bold">✕</button>
+            <div class="mb-6">
+                <span class="text-xs uppercase tracking-widest font-bold text-imperial-600 block">Confidential Enquiry</span>
+                <h3 class="font-serif text-3xl font-bold text-stone-900 mt-1">Request Private Audience</h3>
+                <p class="text-xs text-stone-500 mt-1">Your details remain strictly privileged and protected under statutory confidentiality.</p>
+            </div>
+            <form onsubmit="handleConsultationSubmit(event)" class="space-y-4 text-xs">
+                <div>
+                    <label class="block font-semibold text-stone-700 uppercase mb-1">Full Name & Family Office Title</label>
+                    <input type="text" required class="w-full px-3.5 py-2.5 rounded-lg border border-stone-200 focus:border-imperial-500 focus:ring-1 focus:ring-imperial-500 outline-none text-stone-900" placeholder="e.g. Yashvardhan Singhania / Managing Trustee">
+                </div>
+                <div>
+                    <label class="block font-semibold text-stone-700 uppercase mb-1">Direct Contact Email</label>
+                    <input type="email" required class="w-full px-3.5 py-2.5 rounded-lg border border-stone-200 focus:border-imperial-500 focus:ring-1 focus:ring-imperial-500 outline-none text-stone-900" placeholder="trustee@familyoffice.com">
+                </div>
+                <div>
+                    <label class="block font-semibold text-stone-700 uppercase mb-1">Asset Band Under Consideration</label>
+                    <select class="w-full px-3.5 py-2.5 rounded-lg border border-stone-200 focus:border-imperial-500 focus:ring-1 focus:ring-imperial-500 outline-none text-stone-900">
+                        <option>$5,000,000 - $25,000,000 USD</option>
+                        <option>$25,000,000 - $100,000,000 USD</option>
+                        <option>$100,000,000+ USD (Dynastic Tier)</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block font-semibold text-stone-700 uppercase mb-1">Primary Area of Interest</label>
+                    <select class="w-full px-3.5 py-2.5 rounded-lg border border-stone-200 focus:border-imperial-500 focus:ring-1 focus:ring-imperial-500 outline-none text-stone-900">
+                        <option>Generational Trust & Succession</option>
+                        <option>Cross-Border Merchant Escrow & Liquidity</option>
+                        <option>Allocated Physical Bullion Storage</option>
+                        <option>Imperial Card Allocation</option>
+                    </select>
+                </div>
+                <div class="pt-2">
+                    <button type="submit" class="w-full py-3.5 rounded-full gold-leaf text-stone-950 font-bold uppercase tracking-wider text-xs hover:brightness-105 transition shadow-md">
+                        Transmit Privileged Request
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Diwan Portal Modal -->
+    <div id="diwanModal" class="fixed inset-0 bg-stone-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-sm w-full border border-imperial-300 p-8 shadow-2xl relative text-center">
+            <button onclick="closeDiwanModal()" class="absolute top-4 right-4 text-stone-400 hover:text-stone-800 text-lg">✕</button>
+            <div class="w-12 h-12 rounded-full bg-imperial-100 border border-imperial-300 mx-auto flex items-center justify-center text-imperial-700 mb-4 font-serif font-bold text-xl">
+                T
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-stone-900">Diwan Client Portal</h3>
+            <p class="text-xs text-stone-500 mt-2 mb-6">Enter your family office secure cryptographic passphrase or biometric auth.</p>
+            <button onclick="alert('Tekchandji Diwan Gateway: Biometric handshake completed successfully.')" class="w-full py-2.5 rounded-full gold-leaf text-stone-950 font-bold text-xs uppercase tracking-wider transition">
+                Authenticate Session
+            </button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-stone-900 text-white px-5 py-3 rounded-xl shadow-2xl border border-imperial-400/50 hidden flex items-center gap-3 text-xs z-50">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        <span>Audience Request Received. The Managing Partner’s desk will make direct contact.</span>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        function openConsultationModal() {
+            document.getElementById('consultationModal').classList.remove('hidden');
+        }
+        function closeConsultationModal() {
+            document.getElementById('consultationModal').classList.add('hidden');
+        }
+        function openDiwanModal() {
+            document.getElementById('diwanModal').classList.remove('hidden');
+        }
+        function closeDiwanModal() {
+            document.getElementById('diwanModal').classList.add('hidden');
+        }
+
+        function handleConsultationSubmit(e) {
+            e.preventDefault();
+            closeConsultationModal();
+            const toast = document.getElementById('toast');
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 4500);
+        }
+
+        // Dynastic Calculator Logic
+        const legacySlider = document.getElementById('legacySlider');
+        const legacyDisplay = document.getElementById('legacyDisplay');
+        const projectedEstateDisplay = document.getElementById('projectedEstateDisplay');
+        const gainDisplay = document.getElementById('gainDisplay');
+        const timelineDisplay = document.getElementById('timelineDisplay');
+
+        let selectedYears = 25;
+        const annualRate = 0.08; // 8% compound
+
+        function setTimeline(years) {
+            selectedYears = years;
+            document.querySelectorAll('.time-btn').forEach(b => {
+                b.className = 'time-btn py-2.5 px-2 text-xs font-semibold rounded-lg border border-stone-200 bg-white text-stone-600 hover:border-imperial-400 transition';
+            });
+            document.getElementById('time' + years).className = 'time-btn py-2.5 px-2 text-xs font-semibold rounded-lg border border-imperial-500 bg-imperial-50 text-imperial-900 transition';
+            
+            if (years === 10) timelineDisplay.textContent = '10 Years (Short-Term Estate)';
+            if (years === 25) timelineDisplay.textContent = '25 Years (Next Generation)';
+            if (years === 50) timelineDisplay.textContent = '50 Years (Dynasty Protocol)';
+            
+            updateLegacy();
+        }
+
+        function updateLegacy() {
+            const principal = parseFloat(legacySlider.value);
+            legacyDisplay.textContent = '$' + principal.toLocaleString();
+
+            const finalAmount = principal * Math.pow((1 + annualRate), selectedYears);
+            const gain = finalAmount - principal;
+
+            projectedEstateDisplay.textContent = '$' + Math.round(finalAmount).toLocaleString();
+            gainDisplay.textContent = '+$' + Math.round(gain).toLocaleString();
+        }
+
+        legacySlider.addEventListener('input', updateLegacy);
+        updateLegacy();
+    </script>
+</body>
+</html>
