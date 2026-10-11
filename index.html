@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tekchandji | Private Merchant Banking & Generational Capital</title>
+    <title>HunarPay | A Tekchandji Enterprise - Digital Banking, Travel, Utility & Financial Services</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -15,785 +15,1098 @@
             theme: {
                 extend: {
                     colors: {
-                        imperial: {
-                            50: '#FDFCF7',
-                            100: '#FAF5E8',
-                            200: '#F4E7CB',
-                            300: '#EBD4A5',
-                            400: '#DFBE79',
-                            500: '#CCA049',
-                            600: '#B28231',
-                            700: '#8E6221',
-                            800: '#674415',
-                            900: '#3D270A',
+                        gold: {
+                            50: '#FAF8F0',
+                            100: '#F5EED5',
+                            200: '#EBDCB0',
+                            300: '#DFC685',
+                            400: '#D4AF5B',
+                            500: '#C59B3F',
+                            600: '#A97E29',
+                            700: '#865F1B',
+                            800: '#644413',
+                            900: '#3D2808',
                         },
-                        ivory: '#FCFBF7',
-                        alabaster: '#F7F6F0',
-                        charcoal: '#111215',
+                        hunar: {
+                            gold: '#C59B3F',
+                            dark: '#0F172A',
+                            accent: '#D4AF37',
+                        },
+                        pearl: '#FAFBFD',
+                        alabaster: '#F6F7FA',
                     },
                     fontFamily: {
-                        serif: ['"Cormorant Garamond"', 'serif'],
+                        serif: ['Cinzel', 'serif'],
                         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
                     },
                     boxShadow: {
-                        'gilded': '0 20px 40px -15px rgba(204, 160, 73, 0.18), 0 0 15px 1px rgba(204, 160, 73, 0.08)',
-                        'regal': '0 30px 60px -15px rgba(27, 25, 22, 0.08), 0 10px 20px -5px rgba(204, 160, 73, 0.15)',
+                        'luxury': '0 20px 45px -15px rgba(197, 155, 63, 0.16), 0 10px 25px -10px rgba(0, 0, 0, 0.04)',
+                        'gold-glow': '0 10px 30px -5px rgba(197, 155, 63, 0.22)',
+                        'card-hover': '0 25px 50px -12px rgba(15, 23, 42, 0.08), 0 0 25px 0 rgba(197, 155, 63, 0.14)',
                     }
                 }
             }
         }
     </script>
     <style>
-        .gilded-text {
+        .gold-gradient-text {
             background: linear-gradient(135deg, #9C7227 0%, #D8B263 35%, #F5DE9C 60%, #9C7227 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .gold-border-gradient {
-            border-image: linear-gradient(to right, #B28231, #F4E7CB, #B28231) 1;
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #C59B3F 0%, #E7C97C 50%, #A97E29 100%);
         }
-        .imperial-sheen {
+        .luxury-mesh {
             background-color: #FFFFFF;
             background-image: 
-                radial-gradient(at 15% 10%, rgba(223, 190, 121, 0.08) 0px, transparent 50%),
-                radial-gradient(at 85% 15%, rgba(244, 231, 203, 0.25) 0px, transparent 60%),
-                radial-gradient(at 50% 50%, rgba(253, 252, 247, 0.7) 0px, transparent 70%),
-                radial-gradient(at 90% 85%, rgba(178, 130, 49, 0.06) 0px, transparent 50%);
-        }
-        .gold-card-mirror {
-            background: linear-gradient(135deg, #18191D 0%, #22252C 40%, #15161A 100%);
-            border: 1px solid rgba(223, 190, 121, 0.45);
-        }
-        .gold-leaf {
-            background: linear-gradient(135deg, #CCA049 0%, #F5DE9C 50%, #B28231 100%);
+                radial-gradient(at 10% 12%, rgba(197, 155, 63, 0.07) 0px, transparent 55%),
+                radial-gradient(at 90% 10%, rgba(216, 178, 99, 0.09) 0px, transparent 50%),
+                radial-gradient(at 50% 50%, rgba(250, 248, 240, 0.7) 0px, transparent 65%),
+                radial-gradient(at 85% 85%, rgba(197, 155, 63, 0.06) 0px, transparent 50%);
         }
         /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 7px;
         }
         ::-webkit-scrollbar-track {
-            background: #FCFBF7;
+            background: #FAFAFA;
         }
         ::-webkit-scrollbar-thumb {
-            background: #CCA049;
+            background: #C59B3F;
             border-radius: 4px;
         }
     </style>
 </head>
-<body class="bg-[#FDFCF9] text-stone-800 font-sans selection:bg-imperial-500/20 selection:text-imperial-900">
+<body class="bg-[#FCFCFE] text-slate-800 font-sans selection:bg-gold-500/20 selection:text-gold-900">
 
-    <!-- Top Dispatch & Gold Price Bar -->
-    <div class="border-b border-imperial-200/50 bg-white/95 backdrop-blur-md text-[11px] text-stone-600 py-2 px-4">
+    <!-- Top Dispatch & Group Notice Bar -->
+    <div class="border-b border-gold-200/50 bg-white/95 backdrop-blur-md text-[11px] text-slate-600 py-2 px-4 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-3">
-            <div class="flex items-center gap-3">
-                <span class="w-1.5 h-1.5 rounded-full bg-imperial-600"></span>
-                <span class="font-serif tracking-widest uppercase font-semibold text-stone-900 text-[12px]">TEKCHANDJI HERITAGE TRUST & PRIVATE BANKING</span>
-                <span class="text-imperial-600 font-medium hidden sm:inline">• ESTABLISHED REPUTATION FOR EXCELLENCE</span>
+            <div class="flex items-center gap-2.5">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="font-bold text-slate-900 tracking-wider">HUNARPAY</span>
+                <span class="text-gold-700 font-semibold">• A TEKCHANDJI ENTERPRISE</span>
+                <span class="text-slate-400 hidden sm:inline">|</span>
+                <span class="text-slate-500 hidden sm:inline">"Digital Bano, Tarraki Karo"</span>
             </div>
-            <div class="flex items-center gap-5 text-[11px] font-mono text-stone-500">
-                <span>AU (GOLD): $2,654.80/oz</span>
-                <span class="hidden md:inline">PRIVATE REPO RATE: 5.42%</span>
-                <span class="text-imperial-700 font-semibold font-sans">CONCIERGE DESK: ACTIVE</span>
+            <div class="hidden md:flex items-center gap-6 text-[11px] text-slate-500 font-medium">
+                <span class="flex items-center gap-1.5"><strong class="text-emerald-700">● 99.98%</strong> Network Uptime</span>
+                <span>IRCTC Certified Principal Agent</span>
+                <span>NPCI Bharat BillPay Partner</span>
+                <a href="#calculator" class="text-gold-700 hover:text-gold-800 font-bold underline transition">Calculate Income →</a>
             </div>
         </div>
     </div>
 
-    <!-- Main Navigation Bar -->
-    <header class="sticky top-0 z-50 bg-white/85 backdrop-blur-xl border-b border-stone-200/60 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 h-22 flex items-center justify-between">
-            <!-- Brand Crest & Monogram -->
+    <!-- Main Header Navigation -->
+    <header class="bg-white/90 backdrop-blur-xl border-b border-slate-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
             <a href="#" class="flex items-center gap-3.5 group">
-                <div class="w-12 h-12 rounded-full border border-imperial-400 bg-gradient-to-br from-imperial-50 via-white to-imperial-100 flex items-center justify-center shadow-sm group-hover:scale-105 transition duration-300">
-                    <span class="font-serif text-2xl font-bold gilded-text italic">T</span>
+                <div class="w-11 h-11 rounded-xl border border-gold-400/60 bg-gradient-to-br from-gold-50 via-white to-gold-100 flex items-center justify-center shadow-sm group-hover:scale-105 transition duration-300">
+                    <span class="font-bold text-xl gold-gradient-text tracking-wider">H</span>
                 </div>
                 <div>
-                    <span class="font-serif text-2xl font-bold tracking-[0.18em] text-stone-950 block leading-tight">TEKCHANDJI</span>
-                    <span class="text-[9px] uppercase tracking-[0.35em] text-imperial-600 font-semibold block">Merchant Banking & Private Capital</span>
+                    <span class="text-2xl font-extrabold tracking-tight text-slate-950 block leading-tight">
+                        Hunar<span class="text-gold-600">Pay</span>
+                    </span>
+                    <span class="text-[9px] uppercase tracking-[0.22em] text-slate-400 font-bold block">
+                        A TEKCHANDJI ENTERPRISE
+                    </span>
                 </div>
             </a>
 
             <!-- Navigation Links -->
-            <nav class="hidden lg:flex items-center gap-9 text-sm font-medium text-stone-600">
-                <a href="#heritage" class="hover:text-imperial-700 transition">Generational Wealth</a>
-                <a href="#services" class="hover:text-imperial-700 transition">Private Banking</a>
-                <a href="#imperial-card" class="hover:text-imperial-700 transition">Imperial Card</a>
-                <a href="#calculator" class="hover:text-imperial-700 transition">Legacy Calculator</a>
-                <a href="#trust" class="hover:text-imperial-700 transition">Fiduciary Vaults</a>
+            <nav class="hidden xl:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                <a href="#services" class="hover:text-gold-600 transition">Services We Offer</a>
+                <a href="#partnerships" class="hover:text-gold-600 transition">Partnership Models</a>
+                <a href="#seva-kendra" class="hover:text-gold-600 transition">HunarPay Seva Kendra</a>
+                <a href="#calculator" class="hover:text-gold-600 transition">Income Calculator</a>
+                <a href="#achievements" class="hover:text-gold-600 transition">Network Scale</a>
+                <a href="#why-us" class="hover:text-gold-600 transition">Why HunarPay</a>
             </nav>
 
-            <!-- CTA Actions -->
-            <div class="flex items-center gap-4">
-                <button onclick="openDiwanModal()" class="hidden sm:inline-flex text-xs uppercase tracking-wider font-semibold text-stone-700 hover:text-imperial-700 transition py-2 px-3">
-                    Diwan Portal
+            <!-- Actions -->
+            <div class="flex items-center gap-3">
+                <button onclick="openLoginModal()" class="hidden sm:inline-flex items-center gap-2 text-xs uppercase tracking-wider font-bold text-slate-800 hover:text-gold-600 transition py-2 px-3">
+                    <svg class="w-4 h-4 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/></svg>
+                    <span>Partner Login</span>
                 </button>
-                <button onclick="openConsultationModal()" class="px-6 py-2.5 rounded-full gold-leaf text-stone-950 font-bold text-xs uppercase tracking-widest shadow-gilded hover:shadow-regal hover:scale-[1.02] transition duration-200">
-                    Request Audience
+                <button onclick="openApplyModal('General Inquiry')" class="relative inline-flex items-center justify-center px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-slate-950 rounded-full shadow-gold-glow gold-gradient-bg hover:scale-105 transition duration-200">
+                    <span>Join As Partner</span>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="imperial-sheen relative pt-16 pb-24 lg:pt-24 lg:pb-32 overflow-hidden border-b border-stone-200/60">
-        <!-- Ambient Warm Glows -->
-        <div class="absolute top-10 right-1/4 w-[600px] h-[350px] bg-gradient-to-br from-imperial-200/30 to-amber-100/30 blur-3xl -z-10 rounded-full pointer-events-none"></div>
+    <!-- Hero Section (White, Luxurious, Clean - WITHOUT any merchant terminal mockup) -->
+    <section class="luxury-mesh relative pt-16 pb-24 lg:pt-20 lg:pb-28 overflow-hidden border-b border-slate-100">
+        <!-- Ambient decorative lights -->
+        <div class="absolute top-1/4 right-1/4 w-[750px] h-[400px] bg-gradient-to-br from-gold-200/25 via-gold-100/35 to-amber-100/20 blur-3xl -z-10 rounded-full pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-12 gap-14 items-center">
-                <!-- Left Narrative -->
-                <div class="lg:col-span-7 space-y-8">
-                    <!-- Crest Badge -->
-                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-imperial-300 bg-white/80 shadow-sm text-stone-800 text-xs font-semibold uppercase tracking-widest">
-                        <span class="text-imperial-600 font-serif italic text-base">§</span>
-                        <span>Where Legacy Meets Sovereign Liquidity</span>
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Hero Copy -->
+                <div class="lg:col-span-7 space-y-7">
+                    <!-- Pill Tag -->
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-gold-300/80 bg-white shadow-sm text-xs font-bold text-slate-800">
+                        <span class="w-2 h-2 rounded-full bg-gold-500"></span>
+                        <span class="text-gold-700 font-semibold uppercase tracking-wider">A Tekchandji Enterprise</span>
+                        <span class="text-slate-300">|</span>
+                        <span>Empowering 1,75,000+ Retail Businesses</span>
                     </div>
 
-                    <!-- Grand Headline -->
-                    <div class="space-y-4">
-                        <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-stone-950 tracking-tight leading-[1.08]">
-                            Generational Wealth. <br>
-                            <span class="gilded-text italic font-normal">Modern Mastery.</span>
+                    <!-- Headline -->
+                    <div class="space-y-3">
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-950 tracking-tight leading-[1.12]">
+                            Digital Bano, <br>
+                            <span class="gold-gradient-text">Tarraki Karo.</span>
                         </h1>
-                        <p class="text-lg sm:text-xl text-stone-600 font-light max-w-2xl leading-relaxed">
-                            Tekchandji combines centuries of timeless merchant stewardship with state-of-the-art fintech infrastructure. Tailored for family patriarchs, visionary entrepreneurs, and multi-generational estates.
+                        <p class="text-base sm:text-lg text-slate-600 font-normal max-w-2xl leading-relaxed">
+                            <strong>HunarPay</strong>, backed by the prestigious legacy of <strong>Tekchandji</strong>, is India's fast-growing B2B digital fintech & utility powerhouse. Explore seamless digital services: Banking, Travel, Insurance, Utility, Entertainment & Courier services—all from your local store.
                         </p>
                     </div>
 
-                    <!-- Highlight Pillars -->
-                    <div class="grid grid-cols-3 gap-6 pt-2 pb-2 border-y border-stone-200/80 max-w-xl">
+                    <!-- Earning Highlight Banner -->
+                    <div class="bg-gradient-to-r from-gold-50 via-white to-gold-100/50 border border-gold-300/80 rounded-2xl p-4 sm:p-5 flex flex-wrap sm:flex-nowrap items-center justify-between gap-4 shadow-sm">
                         <div>
-                            <span class="block font-serif text-3xl font-bold text-stone-900">$24B+</span>
-                            <span class="text-[11px] uppercase tracking-wider text-stone-500 font-medium">Family Assets Administered</span>
+                            <span class="text-xs uppercase font-bold text-gold-700 tracking-wider block">Start Earning Immediately</span>
+                            <span class="text-2xl sm:text-3xl font-extrabold text-slate-900">₹2,40,000+ per year</span>
+                            <span class="text-xs text-slate-500 block mt-0.5">Be a one-stop digital hub for your neighborhood</span>
                         </div>
-                        <div>
-                            <span class="block font-serif text-3xl font-bold text-stone-900">100%</span>
-                            <span class="text-[11px] uppercase tracking-wider text-stone-500 font-medium">Allocated Reserve Backing</span>
-                        </div>
-                        <div>
-                            <span class="block font-serif text-3xl font-bold text-imperial-600">3rd Gen</span>
-                            <span class="text-[11px] uppercase tracking-wider text-stone-500 font-medium">Continuous Lineage</span>
-                        </div>
-                    </div>
-
-                    <!-- CTA Row -->
-                    <div class="flex flex-wrap items-center gap-4 pt-2">
-                        <button onclick="openConsultationModal()" class="px-8 py-4 rounded-xl gold-leaf text-stone-950 font-bold text-xs uppercase tracking-widest shadow-gilded hover:scale-105 transition duration-200 flex items-center gap-3">
-                            <span>Open A Private Account</span>
-                            <svg class="w-4 h-4 text-stone-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                        </button>
-                        <a href="#calculator" class="px-7 py-4 rounded-xl bg-white border border-imperial-300 text-stone-800 font-semibold text-xs uppercase tracking-widest hover:border-imperial-500 transition duration-200 shadow-sm flex items-center gap-2">
-                            <span>Project Generational Growth</span>
+                        <a href="#calculator" class="px-5 py-2.5 rounded-xl bg-slate-900 text-white font-bold text-xs uppercase tracking-wider hover:bg-gold-600 transition whitespace-nowrap shadow">
+                            Income Calculator →
                         </a>
                     </div>
 
-                    <!-- Trust Accreditations -->
-                    <div class="flex items-center gap-8 text-xs text-stone-500 pt-1">
+                    <!-- Action Buttons -->
+                    <div class="flex flex-wrap items-center gap-4 pt-1">
+                        <a href="#services" class="px-8 py-4 rounded-xl gold-gradient-bg text-slate-950 font-bold text-xs uppercase tracking-widest shadow-luxury hover:scale-105 transition duration-200 flex items-center gap-2">
+                            <span>Our Services</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                        <button onclick="openApplyModal('Partner Inquiry')" class="px-7 py-4 rounded-xl bg-white border border-gold-300 text-slate-800 font-bold text-xs uppercase tracking-wider hover:border-gold-500 hover:bg-gold-50/40 transition duration-200 shadow-sm flex items-center gap-2">
+                            <span>Partner With Us</span>
+                        </button>
+                    </div>
+
+                    <!-- Trust indicators -->
+                    <div class="flex flex-wrap items-center gap-6 text-xs text-slate-500 pt-2 font-medium">
                         <div class="flex items-center gap-2">
-                            <span class="text-imperial-600 font-serif font-bold text-base">✓</span>
-                            <span>Statutory Protected Trusts</span>
+                            <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <span>NPCI Bharat BillPay Certified</span>
                         </div>
                         <div class="flex items-center gap-2">
-                            <span class="text-imperial-600 font-serif font-bold text-base">✓</span>
-                            <span>Global Merchant Escrow Licensure</span>
+                            <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <span>IRCTC Authorized Principal</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <span>ISO 27001 Data Security</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Visual: The Tekchandji Digital Family Office Hub -->
+                <!-- Right Hero: Pure White & Luxurious Multi-Service Showcase (NO Terminal Mockup) -->
                 <div class="lg:col-span-5 relative">
-                    <div class="absolute -inset-3 bg-gradient-to-br from-imperial-300 via-amber-200 to-yellow-200 rounded-3xl blur-2xl opacity-40 -z-10"></div>
-
-                    <!-- Glass Vault Card -->
-                    <div class="bg-white rounded-2xl border border-imperial-200 p-7 shadow-2xl relative backdrop-blur-md">
-                        <!-- Top Crest Bar -->
-                        <div class="flex justify-between items-center pb-5 border-b border-stone-100">
-                            <div class="flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full border border-imperial-400 bg-imperial-50 flex items-center justify-center font-serif font-bold text-imperial-800 italic text-sm">
-                                    T
-                                </div>
-                                <div>
-                                    <span class="font-serif font-bold text-stone-900 text-sm block">TEKCHANDJI FAMILY DESK</span>
-                                    <span class="text-[9px] uppercase tracking-wider text-imperial-600 font-semibold">ESTATE PROTOCOL #TK-889</span>
-                                </div>
+                    <div class="bg-white rounded-3xl border border-gold-200/90 p-8 shadow-2xl relative backdrop-blur-xl space-y-6">
+                        
+                        <div class="flex justify-between items-center pb-4 border-b border-slate-100">
+                            <div>
+                                <span class="text-xs uppercase tracking-wider font-extrabold text-slate-900 block">HunarPay Ecosystem</span>
+                                <span class="text-[10px] text-gold-700 font-semibold">Under Tekchandji Umbrella</span>
                             </div>
-                            <span class="text-[10px] uppercase font-mono bg-imperial-50 text-imperial-800 px-2.5 py-1 rounded-full font-bold border border-imperial-200">ACTIVE TRUST</span>
+                            <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 font-bold text-[10px] border border-emerald-200">
+                                50+ Services Active
+                            </span>
                         </div>
 
-                        <!-- Estate Valuation -->
-                        <div class="py-5">
-                            <span class="text-[11px] font-semibold uppercase tracking-wider text-stone-400">Total Net Estate Valuation</span>
-                            <div class="flex items-baseline gap-2 mt-1">
-                                <span class="font-serif text-4xl font-bold text-stone-900">$142,600,000</span>
-                                <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">+9.8% YoY</span>
-                            </div>
-                            <span class="text-[11px] text-stone-400 mt-0.5 block">Discretionary Wealth & Merchant Liquidity Trust</span>
-                        </div>
-
-                        <!-- Portfolio Holdings Visual -->
-                        <div class="space-y-3 pt-2">
-                            <div class="text-[11px] font-semibold uppercase tracking-wider text-stone-400">Allocated Wealth Segments</div>
-                            
-                            <div class="bg-alabaster p-3 rounded-xl border border-stone-100 space-y-2.5 text-xs">
-                                <div class="flex justify-between items-center">
-                                    <div class="flex items-center gap-2">
-                                        <div class="w-2.5 h-2.5 rounded-full bg-imperial-600"></div>
-                                        <span class="font-medium text-stone-800">Physical Gold Bullion (Vaulted in Zurich)</span>
-                                    </div>
-                                    <span class="font-mono font-semibold text-stone-900">$57,040,000 (40%)</span>
+                        <!-- Elegant Visual Feature Cards -->
+                        <div class="space-y-3">
+                            <div class="p-3.5 rounded-xl border border-slate-100 bg-pearl hover:border-gold-300 transition flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-gold-100 text-gold-800 flex items-center justify-center font-bold text-lg">
+                                    ₹
                                 </div>
-                                <div class="w-full bg-stone-200 h-1.5 rounded-full overflow-hidden">
-                                    <div class="bg-imperial-600 h-full w-[40%] rounded-full"></div>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-slate-900 text-sm">Banking & Aadhaar ATM</h4>
+                                    <p class="text-xs text-slate-500">AEPS, Micro-ATM, DMT Money Transfer & NSDL Accounts</p>
                                 </div>
+                                <span class="text-xs text-gold-700 font-bold">Instant</span>
                             </div>
 
-                            <div class="bg-alabaster p-3 rounded-xl border border-stone-100 space-y-2.5 text-xs">
-                                <div class="flex justify-between items-center">
-                                    <div class="flex items-center gap-2">
-                                        <div class="w-2.5 h-2.5 rounded-full bg-stone-800"></div>
-                                        <span class="font-medium text-stone-800">Private Merchant Credit & Trade Finance</span>
-                                    </div>
-                                    <span class="font-mono font-semibold text-stone-900">$49,910,000 (35%)</span>
+                            <div class="p-3.5 rounded-xl border border-slate-100 bg-pearl hover:border-gold-300 transition flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-gold-100 text-gold-800 flex items-center justify-center font-bold text-lg">
+                                    ✈
                                 </div>
-                                <div class="w-full bg-stone-200 h-1.5 rounded-full overflow-hidden">
-                                    <div class="bg-stone-800 h-full w-[35%] rounded-full"></div>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-slate-900 text-sm">Travel & IRCTC Ticketing</h4>
+                                    <p class="text-xs text-slate-500">Official Railway Tatkal, Flights, Hotels & Bus Booking</p>
                                 </div>
+                                <span class="text-xs text-gold-700 font-bold">Authorized</span>
                             </div>
 
-                            <div class="bg-alabaster p-3 rounded-xl border border-stone-100 space-y-2.5 text-xs">
-                                <div class="flex justify-between items-center">
-                                    <div class="flex items-center gap-2">
-                                        <div class="w-2.5 h-2.5 rounded-full bg-emerald-600"></div>
-                                        <span class="font-medium text-stone-800">Sovereign Treasury Cash Equivalents</span>
-                                    </div>
-                                    <span class="font-mono font-semibold text-stone-900">$35,650,000 (25%)</span>
+                            <div class="p-3.5 rounded-xl border border-slate-100 bg-pearl hover:border-gold-300 transition flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-gold-100 text-gold-800 flex items-center justify-center font-bold text-lg">
+                                    ⚡
                                 </div>
-                                <div class="w-full bg-stone-200 h-1.5 rounded-full overflow-hidden">
-                                    <div class="bg-emerald-600 h-full w-[25%] rounded-full"></div>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-slate-900 text-sm">Bharat BillPay & Utilities</h4>
+                                    <p class="text-xs text-slate-500">Electricity, Water, Gas, FASTag, Mobile & DTH Recharge</p>
                                 </div>
+                                <span class="text-xs text-gold-700 font-bold">BBPS</span>
+                            </div>
+
+                            <div class="p-3.5 rounded-xl border border-slate-100 bg-pearl hover:border-gold-300 transition flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-gold-100 text-gold-800 flex items-center justify-center font-bold text-lg">
+                                    🛡
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-slate-900 text-sm">Insurance & Courier Delivery</h4>
+                                    <p class="text-xs text-slate-500">Two-Wheeler, Health Policies & Pan-India Parcel Shipping</p>
+                                </div>
+                                <span class="text-xs text-gold-700 font-bold">Pan-India</span>
                             </div>
                         </div>
 
-                        <!-- Card Footer Indicator -->
-                        <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-xs">
-                            <span class="text-stone-500">Dedicated Managing Partner</span>
-                            <span class="font-serif font-bold text-imperial-800">Shri R. Tekchandji</span>
+                        <!-- Footnote -->
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                            <span>Ready to set up in your store?</span>
+                            <button onclick="openApplyModal('Quick Start')" class="font-bold text-gold-700 hover:text-gold-900 transition underline">
+                                Apply in 2 Mins →
+                            </button>
                         </div>
+
                     </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Achievements Section (MOS-World Reference) -->
+    <section id="achievements" class="py-16 bg-white border-b border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-2">Our Achievements</h3>
+                <p class="text-xs sm:text-sm text-slate-500 max-w-2xl mx-auto leading-relaxed">
+                    Groundbreaking technological advancements, notable strides in accessibility, and fostering entrepreneurship across communities nationwide under the Tekchandji Group banner.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-6 rounded-2xl bg-pearl border border-gold-200/60 hover:shadow-md transition">
+                    <h4 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-1">1,75,000+</h4>
+                    <p class="text-xs font-bold text-gold-700 uppercase tracking-wider">Active Agents</p>
+                    <span class="text-[11px] text-slate-400 mt-1 block">Local retail stores & entrepreneurs</span>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-pearl border border-gold-200/60 hover:shadow-md transition">
+                    <h4 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-1">11,500+</h4>
+                    <p class="text-xs font-bold text-gold-700 uppercase tracking-wider">Distributors</p>
+                    <span class="text-[11px] text-slate-400 mt-1 block">Managing regional distribution networks</span>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-pearl border border-gold-200/60 hover:shadow-md transition">
+                    <h4 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-1">900+</h4>
+                    <p class="text-xs font-bold text-gold-700 uppercase tracking-wider">Master Distributors</p>
+                    <span class="text-[11px] text-slate-400 mt-1 block">Territory leaders across multiple districts</span>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-pearl border border-gold-200/60 hover:shadow-md transition">
+                    <h4 class="text-3xl sm:text-4xl font-extrabold text-gold-600 mb-1">350+</h4>
+                    <p class="text-xs font-bold text-slate-900 uppercase tracking-wider">HunarPay Seva Kendras</p>
+                    <span class="text-[11px] text-slate-400 mt-1 block">Exclusive pin-code franchise hubs</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Heritage Trust Marquee -->
-    <section class="py-12 bg-white border-b border-stone-200/60">
+    <!-- Services We Offer Section (Deep MOS-World Comprehensive Categorization) -->
+    <section id="services" class="py-24 bg-pearl border-b border-slate-200/60">
         <div class="max-w-7xl mx-auto px-6">
-            <p class="text-center text-[11px] uppercase tracking-[0.3em] font-semibold text-stone-400 mb-8">
-                Safeguarding Multi-Generational Fortunes Across Key Capital Capitals
-            </p>
-            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 text-stone-700 opacity-80">
-                <span class="font-serif text-lg tracking-widest font-semibold">MUMBAI PRIVATE DESK</span>
-                <span class="font-serif text-lg tracking-widest font-semibold">DUBAI DIFC CUSTODY</span>
-                <span class="font-serif text-lg tracking-widest font-semibold">SINGAPORE VCC RAILS</span>
-                <span class="font-serif text-lg tracking-widest font-semibold">LONDON MAYFAIR TRUST</span>
-                <span class="font-serif text-lg tracking-widest font-semibold">GENEVA FREEPORT BULLION</span>
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-xs uppercase tracking-[0.3em] font-bold text-gold-600 block">Comprehensive Ecosystem</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
+                    Services We Offer
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base">
+                    One single HunarPay account equips your retail business with 50+ indispensable digital utilities.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- 1. Banking -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-gold-300 shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-gold-50 border border-gold-200 flex items-center justify-center mb-5 text-gold-700 font-bold group-hover:bg-gold-500 group-hover:text-white transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Banking Services</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-5">
+                        Explore seamless banking services right at your doorstep. Cash withdrawals, micro-ATM swiping, money transfers, and savings account opening.
+                    </p>
+                    <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-700">
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ AEPS Cash Out</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Micro-ATM (M-ATM)</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ DMT Money Transfer</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ NSDL Bank Account</span>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <span class="text-gold-700 font-bold">Earn up to ₹15/txn</span>
+                        <button onclick="openApplyModal('Banking Services')" class="font-bold text-slate-900 hover:text-gold-600 transition">Know More →</button>
+                    </div>
+                </div>
+
+                <!-- 2. Travel -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-gold-300 shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-gold-50 border border-gold-200 flex items-center justify-center mb-5 text-gold-700 font-bold group-hover:bg-gold-500 group-hover:text-white transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Travel Services</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-5">
+                        Plan and book travels effortlessly. From authorized IRCTC railway bookings to domestic and international flights, luxury buses, and hotels.
+                    </p>
+                    <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-700">
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ IRCTC Authorized Rail</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Flight Bookings</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Inter-state Bus</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Hotel Reservations</span>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <span class="text-gold-700 font-bold">Tatkal AC & Sleeper</span>
+                        <button onclick="openApplyModal('Travel & IRCTC')" class="font-bold text-slate-900 hover:text-gold-600 transition">Know More →</button>
+                    </div>
+                </div>
+
+                <!-- 3. Utility (BBPS) -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-gold-300 shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-gold-50 border border-gold-200 flex items-center justify-center mb-5 text-gold-700 font-bold group-hover:bg-gold-500 group-hover:text-white transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Utility Solutions (BBPS)</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-5">
+                        Access to essential utilities shouldn't be hard. Instant bill payments for electricity, water, gas, FASTag, LIC premiums, and mobile recharges.
+                    </p>
+                    <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-700">
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Electricity & Gas Bills</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Mobile / DTH Recharge</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ FASTag Recharge</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ LIC & CCBP Bill Pay</span>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <span class="text-gold-700 font-bold">100+ State Utilities</span>
+                        <button onclick="openApplyModal('Utility BBPS')" class="font-bold text-slate-900 hover:text-gold-600 transition">Know More →</button>
+                    </div>
+                </div>
+
+                <!-- 4. Insurance Plans -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-gold-300 shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-gold-50 border border-gold-200 flex items-center justify-center mb-5 text-gold-700 font-bold group-hover:bg-gold-500 group-hover:text-white transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Comprehensive Insurance</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-5">
+                        Safeguard what matters most. Instant motor insurance quotes, health plans, and travel insurance for your walk-in customers.
+                    </p>
+                    <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-700">
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Two-Wheeler Insurance</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Four-Wheeler & Commercial</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Health Insurance</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Travel Insurance</span>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <span class="text-gold-700 font-bold">Attractive POSP Margins</span>
+                        <button onclick="openApplyModal('Insurance POSP')" class="font-bold text-slate-900 hover:text-gold-600 transition">Know More →</button>
+                    </div>
+                </div>
+
+                <!-- 5. Courier & Cargo Logistics -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-gold-300 shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-gold-50 border border-gold-200 flex items-center justify-center mb-5 text-gold-700 font-bold group-hover:bg-gold-500 group-hover:text-white transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Multi-Courier & Cargo</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-5">
+                        Send and receive packages without the hassle. Connecting rural and urban India through an extensive courier logistics network.
+                    </p>
+                    <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-700">
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Pan-India Courier Booking</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Doorstep Parcel Pickup</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ ONDC Seller Integration</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Live Track & Trace</span>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <span class="text-gold-700 font-bold">Reliable Delivery Network</span>
+                        <button onclick="openApplyModal('Courier Cargo')" class="font-bold text-slate-900 hover:text-gold-600 transition">Know More →</button>
+                    </div>
+                </div>
+
+                <!-- 6. Digital Marketing & Citizen G2C -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-gold-300 shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-gold-50 border border-gold-200 flex items-center justify-center mb-5 text-gold-700 font-bold group-hover:bg-gold-500 group-hover:text-white transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Digital Services & Citizen G2C</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-5">
+                        Drive ROI and growth with digital marketing, instant paperless PAN card creation, ITR filing, and local promotional tools.
+                    </p>
+                    <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-700">
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Instant PAN Card (NSDL)</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Local Google SEO</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Social Media Marketing</span>
+                        <span class="p-2 rounded bg-slate-50 border border-slate-100">✓ Bulk Lead Gen & SMS</span>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <span class="text-gold-700 font-bold">Paperless 2-Hour e-KYC</span>
+                        <button onclick="openApplyModal('Digital Marketing G2C')" class="font-bold text-slate-900 hover:text-gold-600 transition">Know More →</button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Services & Capabilities Grid -->
-    <section id="services" class="py-24 bg-alabaster border-b border-stone-200/60">
+    <!-- HunarPay Seva Kendra (HSK) Showcase (MOS-World MSK Reference) -->
+    <section id="seva-kendra" class="py-24 bg-white border-b border-slate-200/60 overflow-hidden">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <span class="text-xs uppercase tracking-[0.3em] font-bold text-imperial-600 block">The Tekchandji Disciplines</span>
-                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-stone-900">
-                    Bespoke Financial Architecture for Estates & Dynasties
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-gold-300 bg-gold-50 text-gold-900 text-xs font-bold uppercase tracking-wider">
+                        ★ Franchising Opportunity
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
+                        Setup A HunarPay Seva Kendra (HSK)
+                    </h2>
+                    <p class="text-base text-slate-600 leading-relaxed">
+                        <strong>HunarPay Seva Kendra (HSK)</strong> is an exclusive initiative under <strong>Tekchandji</strong> that provides a fantastic business opportunity through franchising. Our motto, <em>"One Pin Code, One Agent,"</em> guarantees that each area has its own dedicated center.
+                    </p>
+
+                    <div class="space-y-3 pt-2">
+                        <div class="p-4 rounded-xl border border-slate-100 bg-pearl">
+                            <h4 class="font-bold text-slate-900 text-sm">One Pin Code One Kendra Policy</h4>
+                            <p class="text-xs text-slate-500 mt-0.5">Exclusive geographical territory protects your customer base and footfall.</p>
+                        </div>
+                        <div class="p-4 rounded-xl border border-slate-100 bg-pearl">
+                            <h4 class="font-bold text-slate-900 text-sm">Complete Hardware & Branded Store Kit</h4>
+                            <p class="text-xs text-slate-500 mt-0.5">Includes Biometric Fingerprint Scanner, Micro-ATM Machine, and Branded Signboards.</p>
+                        </div>
+                        <div class="p-4 rounded-xl border border-slate-100 bg-pearl">
+                            <h4 class="font-bold text-slate-900 text-sm">Enhanced Commission Slabs</h4>
+                            <p class="text-xs text-slate-500 mt-0.5">Enjoy higher tiered payouts across banking, ticket bookings, and bill payments.</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex flex-wrap gap-4">
+                        <button onclick="openApplyModal('HunarPay Seva Kendra')" class="px-7 py-3.5 rounded-xl gold-gradient-bg text-slate-950 font-bold text-xs uppercase tracking-widest shadow-gold-glow hover:scale-105 transition">
+                            Know More About (HSK) Opportunity
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Feature Presentation -->
+                <div class="lg:col-span-6">
+                    <div class="bg-gradient-to-br from-gold-50 via-white to-gold-100/40 p-8 sm:p-10 rounded-3xl border border-gold-300 shadow-xl space-y-6">
+                        <div class="flex items-center justify-between border-b border-gold-200 pb-4">
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-wider text-gold-700 block">Franchise Structure</span>
+                                <h3 class="text-2xl font-extrabold text-slate-900">HunarPay Seva Kendra</h3>
+                            </div>
+                            <span class="px-3 py-1 bg-gold-500 text-slate-950 font-bold text-xs rounded-full">
+                                Exclusive
+                            </span>
+                        </div>
+
+                        <div class="space-y-3 text-xs">
+                            <div class="flex justify-between items-center p-3 bg-white rounded-xl border border-slate-100">
+                                <span class="font-semibold text-slate-700">Territory Allocation:</span>
+                                <span class="font-bold text-slate-900">1 Kendra Per Pincode</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-white rounded-xl border border-slate-100">
+                                <span class="font-semibold text-slate-700">Expected Monthly Returns:</span>
+                                <span class="font-bold text-gold-700">₹40,000 – ₹1,00,000+</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-white rounded-xl border border-slate-100">
+                                <span class="font-semibold text-slate-700">Storefront Setup Time:</span>
+                                <span class="font-bold text-slate-900">Within 48 Hours</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-white rounded-xl border border-slate-100">
+                                <span class="font-semibold text-slate-700">Governance & Parent Group:</span>
+                                <span class="font-bold text-slate-900">Tekchandji Enterprise</span>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-white border border-gold-200 text-xs text-slate-600 leading-relaxed">
+                            "Our Seva Kendra model focuses on providing financial services to communities. It's a simple yet innovative concept that empowers individuals to become digital banking champions in their own neighborhoods."
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner With Us (Agent, Distributor, Master Distributor - Direct MOS World structure) -->
+    <section id="partnerships" class="py-24 bg-pearl border-b border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-xs uppercase tracking-[0.3em] font-bold text-gold-600 block">Collaborate & Succeed with HunarPay</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
+                    Business Opportunities For Everyone
                 </h2>
-                <p class="text-stone-600 font-light text-base sm:text-lg">
-                    We bridge timeless family office values with digital merchant rails, offering unmatched asset isolation and real-time capital mobility.
+                <p class="text-slate-600 text-sm sm:text-base">
+                    HunarPay offers unparalleled business prospects for diverse segments including shopkeepers, retailers, students, housewives, professionals, and insurance agents.
                 </p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Pillar 1 -->
-                <div class="bg-white rounded-2xl p-8 border border-stone-200 hover:border-imperial-300 shadow-sm hover:shadow-regal hover:-translate-y-1 transition duration-300 group">
-                    <div class="w-14 h-14 rounded-full bg-imperial-50 border border-imperial-200 flex items-center justify-center mb-6 text-imperial-700 font-serif font-bold text-2xl group-hover:bg-imperial-500 group-hover:text-white transition">
-                        I
+                
+                <!-- 1. HunarPay Agent -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200 hover:border-gold-300 shadow-sm hover:shadow-card-hover transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-gold-100 text-gold-800 font-bold flex items-center justify-center text-sm mb-4">
+                            01
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-1">Become a HunarPay Agent</h3>
+                        <span class="text-xs font-bold text-gold-600 block mb-3">Rewards Exceeding ₹20,000 / month</span>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            Elevate your journey by becoming a HunarPay Agent. Join our extensive network of 1,75,000 partners and turn your store into a digital powerhouse.
+                        </p>
+                        <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">Suitable Categories:</h4>
+                        <div class="flex flex-wrap gap-1.5 text-[11px] text-slate-600 mb-6">
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Kirana Shop</span>
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Medical Store</span>
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Mobile Recharge</span>
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Hardware Store</span>
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Travel Agency</span>
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Housewives & Students</span>
+                        </div>
                     </div>
-                    <h3 class="font-serif text-2xl font-bold text-stone-900 mb-3">Merchant Capital & Cross-Border Escrow</h3>
-                    <p class="text-sm text-stone-600 leading-relaxed mb-6">
-                        Rapid, high-volume settlement for real estate acquisitions, commodity transactions, and private corporate buyouts with zero counterparty risk.
-                    </p>
-                    <ul class="space-y-2 text-xs text-stone-500">
-                        <li class="flex items-center gap-2"><span class="text-imperial-600">✦</span> Instant multi-jurisdictional escrow</li>
-                        <li class="flex items-center gap-2"><span class="text-imperial-600">✦</span> Direct bullion exchange liquidity</li>
-                        <li class="flex items-center gap-2"><span class="text-imperial-600">✦</span> Complete privacy & discretionary routing</li>
-                    </ul>
+                    <button onclick="openApplyModal('HunarPay Agent')" class="w-full py-3 rounded-xl gold-gradient-bg text-slate-950 font-bold text-xs uppercase tracking-wider hover:brightness-105 transition shadow">
+                        Join as a HunarPay Agent
+                    </button>
                 </div>
 
-                <!-- Pillar 2 -->
-                <div class="bg-white rounded-2xl p-8 border border-stone-200 hover:border-imperial-300 shadow-sm hover:shadow-regal hover:-translate-y-1 transition duration-300 group">
-                    <div class="w-14 h-14 rounded-full bg-imperial-50 border border-imperial-200 flex items-center justify-center mb-6 text-imperial-700 font-serif font-bold text-2xl group-hover:bg-imperial-500 group-hover:text-white transition">
-                        II
+                <!-- 2. HunarPay Distributor -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200 hover:border-gold-300 shadow-sm hover:shadow-card-hover transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-gold-100 text-gold-800 font-bold flex items-center justify-center text-sm mb-4">
+                            02
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-1">Become a Distributor</h3>
+                        <span class="text-xs font-bold text-gold-600 block mb-3">Earnings Exceeding ₹25,000 / month</span>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            Step into the role of a HunarPay Distributor and build a network of retail agents. Unlock continuous passive commission on every transaction conducted in your area.
+                        </p>
+                        <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">Suitable Categories:</h4>
+                        <div class="flex flex-wrap gap-1.5 text-[11px] text-slate-600 mb-6">
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Telecom Distributors</span>
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Pharma Distributors</span>
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Retail Wholesalers</span>
+                            <span class="px-2 py-1 rounded bg-slate-50 border">FMCG Distributors</span>
+                        </div>
                     </div>
-                    <h3 class="font-serif text-2xl font-bold text-stone-900 mb-3">Family Trust & Dynastic Succession</h3>
-                    <p class="text-sm text-stone-600 leading-relaxed mb-6">
-                        Structured governance protocols designed to protect capital across three or more generations, insulating wealth against probate and tax dilution.
-                    </p>
-                    <ul class="space-y-2 text-xs text-stone-500">
-                        <li class="flex items-center gap-2"><span class="text-imperial-600">✦</span> Multi-generational trust deeds</li>
-                        <li class="flex items-center gap-2"><span class="text-imperial-600">✦</span> Smart-contract conditional dispensations</li>
-                        <li class="flex items-center gap-2"><span class="text-imperial-600">✦</span> Global tax treaty optimization</li>
-                    </ul>
+                    <button onclick="openApplyModal('HunarPay Distributor')" class="w-full py-3 rounded-xl border border-gold-300 text-slate-800 hover:bg-gold-500 hover:text-white font-bold text-xs uppercase tracking-wider transition">
+                        Join as Distributor
+                    </button>
                 </div>
 
-                <!-- Pillar 3 -->
-                <div class="bg-white rounded-2xl p-8 border border-stone-200 hover:border-imperial-300 shadow-sm hover:shadow-regal hover:-translate-y-1 transition duration-300 group">
-                    <div class="w-14 h-14 rounded-full bg-imperial-50 border border-imperial-200 flex items-center justify-center mb-6 text-imperial-700 font-serif font-bold text-2xl group-hover:bg-imperial-500 group-hover:text-white transition">
-                        III
+                <!-- 3. HunarPay Master Distributor -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200 hover:border-gold-300 shadow-sm hover:shadow-card-hover transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-gold-100 text-gold-800 font-bold flex items-center justify-center text-sm mb-4">
+                            03
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-1">Master Distributor</h3>
+                        <span class="text-xs font-bold text-gold-600 block mb-3">Earnings Surpassing ₹50,000 / month</span>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            Elevate your status as a HunarPay Master Distributor. Connect with an extensive district network, cultivate your team, and enjoy highest override slabs.
+                        </p>
+                        <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">Suitable Categories:</h4>
+                        <div class="flex flex-wrap gap-1.5 text-[11px] text-slate-600 mb-6">
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Griha Udyog Members</span>
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Self Help Groups (SHG)</span>
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Teachers & Officers</span>
+                            <span class="px-2 py-1 rounded bg-slate-50 border">Corporate Sales Leaders</span>
+                        </div>
                     </div>
-                    <h3 class="font-serif text-2xl font-bold text-stone-900 mb-3">Private Debt & Secured Yield Notes</h3>
-                    <p class="text-sm text-stone-600 leading-relaxed mb-6">
-                        Access exclusive, asset-backed private credit facilities secured against prime real estate, luxury inventory, and sovereign sovereign paper.
-                    </p>
-                    <ul class="space-y-2 text-xs text-stone-500">
-                        <li class="flex items-center gap-2"><span class="text-imperial-600">✦</span> Over-collateralized lending corridors</li>
-                        <li class="flex items-center gap-2"><span class="text-imperial-600">✦</span> 8% - 11% consistent target yields</li>
-                        <li class="flex items-center gap-2"><span class="text-imperial-600">✦</span> Priority seniority liens on all deals</li>
-                    </ul>
+                    <button onclick="openApplyModal('Master Distributor')" class="w-full py-3 rounded-xl border border-gold-300 text-slate-800 hover:bg-gold-500 hover:text-white font-bold text-xs uppercase tracking-wider transition">
+                        Join as Master Distributor
+                    </button>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- The Tekchandji Imperial Gold Card -->
-    <section id="imperial-card" class="py-24 bg-white border-b border-stone-200/60 overflow-hidden">
+    <!-- Why Choose HunarPay (MOS-World "Discover the Difference" Reference) -->
+    <section id="why-us" class="py-24 bg-white border-b border-slate-200/60">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-12 gap-14 items-center">
-                <!-- Physical Card Simulation -->
-                <div class="lg:col-span-6 flex justify-center">
-                    <div class="relative w-full max-w-md group">
-                        <div class="absolute -inset-4 bg-gradient-to-r from-amber-400 to-yellow-600 rounded-3xl blur-2xl opacity-20 group-hover:opacity-35 transition duration-500"></div>
-
-                        <!-- Card Body -->
-                        <div class="relative aspect-[1.586/1] w-full rounded-2xl gold-card-mirror p-8 text-white shadow-2xl flex flex-col justify-between overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                            <!-- Golden Filigree Corner Emblems -->
-                            <div class="absolute top-0 right-0 w-36 h-36 bg-[radial-gradient(circle_at_top_right,_rgba(223,190,121,0.2),_transparent_70%)]"></div>
-                            
-                            <!-- Header -->
-                            <div class="flex justify-between items-start z-10">
-                                <div>
-                                    <span class="font-serif tracking-[0.25em] text-sm text-imperial-300 font-bold block">TEKCHANDJI</span>
-                                    <span class="text-[8px] uppercase tracking-[0.3em] text-stone-400">IMPERIAL MERCHANT CARD</span>
-                                </div>
-                                <div class="w-11 h-8 rounded-md bg-gradient-to-r from-amber-300 to-yellow-500 border border-yellow-200 shadow flex items-center justify-center">
-                                    <div class="w-6 h-4 border border-amber-900/40 rounded-sm"></div>
-                                </div>
-                            </div>
-
-                            <!-- Card Number -->
-                            <div class="z-10 my-auto">
-                                <span class="font-mono tracking-[0.26em] text-lg sm:text-xl text-imperial-100">8891 •••• •••• 1928</span>
-                            </div>
-
-                            <!-- Footer -->
-                            <div class="flex justify-between items-end z-10">
-                                <div>
-                                    <span class="text-[8px] uppercase tracking-widest text-imperial-400 block">CARDHOLDER PATRIARCH</span>
-                                    <span class="font-serif tracking-widest text-sm font-semibold text-white">ANANDRAO TEKCHANDJI</span>
-                                </div>
-                                <div class="text-right">
-                                    <span class="text-[8px] uppercase tracking-widest text-stone-400 block">STANDARD</span>
-                                    <span class="font-serif tracking-widest text-xs font-bold text-amber-300">24K MIRROR GOLD</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Text Copy -->
-                <div class="lg:col-span-6 space-y-6">
-                    <span class="text-xs uppercase tracking-[0.3em] font-bold text-imperial-600 block">Sovereign Purchasing Privilege</span>
-                    <h2 class="font-serif text-4xl sm:text-5xl font-bold text-stone-900 leading-tight">
-                        The Tekchandji Imperial Card
-                    </h2>
-                    <p class="text-stone-600 text-base leading-relaxed">
-                        Handcrafted with an authentic 24-karat gold mirror substrate. Linked directly to your family trust and private merchant escrow lines without pre-set spending limits.
-                    </p>
-
-                    <div class="grid grid-cols-2 gap-4 pt-2">
-                        <div class="p-4 rounded-xl border border-stone-200 bg-alabaster">
-                            <span class="font-serif font-bold text-stone-900 text-lg block">No Spending Limit</span>
-                            <span class="text-xs text-stone-500">Backed by allocated bullion & trust reserves</span>
-                        </div>
-                        <div class="p-4 rounded-xl border border-stone-200 bg-alabaster">
-                            <span class="font-serif font-bold text-stone-900 text-lg block">Personal Diwan</span>
-                            <span class="text-xs text-stone-500">Dedicated private banker on direct call</span>
-                        </div>
-                        <div class="p-4 rounded-xl border border-stone-200 bg-alabaster">
-                            <span class="font-serif font-bold text-stone-900 text-lg block">Global Airport Lounges</span>
-                            <span class="text-xs text-stone-500">Unrestricted VIP tarmac & private jet suite access</span>
-                        </div>
-                        <div class="p-4 rounded-xl border border-stone-200 bg-alabaster">
-                            <span class="font-serif font-bold text-stone-900 text-lg block">0% Foreign Exchange</span>
-                            <span class="text-xs text-stone-500">Pure interbank bullion exchange pricing</span>
-                        </div>
-                    </div>
-
-                    <div class="pt-2">
-                        <button onclick="openConsultationModal()" class="px-6 py-3 rounded-lg border border-imperial-400 bg-imperial-50 text-imperial-900 font-semibold text-xs uppercase tracking-wider hover:bg-imperial-100 transition">
-                            Inquire for Card Minting
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive Generational Wealth Calculator -->
-    <section id="calculator" class="py-24 bg-alabaster border-b border-stone-200/60">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center mb-12 space-y-3">
-                <span class="text-xs uppercase tracking-[0.3em] font-bold text-imperial-600 block">Dynastic Wealth Compounding</span>
-                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-stone-900">
-                    Generational Legacy Calculator
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-xs uppercase tracking-[0.3em] font-bold text-gold-600 block">The Competitive Edge</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
+                    Discover the Difference with HunarPay!
                 </h2>
-                <p class="text-stone-600 text-sm max-w-xl mx-auto">
-                    Simulate how family office trust structuring, combined with tax-shielded private credit and bullion compounding, expands capital across generations.
+                <p class="text-slate-600 text-sm sm:text-base">
+                    We bring together technological innovation, a dedicated team, and a customer-first approach to provide seamless services tailored to your needs.
                 </p>
             </div>
 
-            <div class="bg-white rounded-3xl border border-imperial-200 p-8 sm:p-12 shadow-gilded">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+                <div class="p-5 rounded-2xl bg-pearl border border-slate-100 hover:border-gold-300 transition">
+                    <div class="w-12 h-12 rounded-full bg-gold-50 text-gold-700 flex items-center justify-center font-bold mx-auto mb-3 text-lg">★</div>
+                    <h4 class="font-bold text-slate-900 text-sm mb-1">Proven Excellence</h4>
+                    <p class="text-[11px] text-slate-400">Backed by Tekchandji enterprise heritage.</p>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-pearl border border-slate-100 hover:border-gold-300 transition">
+                    <div class="w-12 h-12 rounded-full bg-gold-50 text-gold-700 flex items-center justify-center font-bold mx-auto mb-3 text-lg">⚡</div>
+                    <h4 class="font-bold text-slate-900 text-sm mb-1">Cutting-Edge Tech</h4>
+                    <p class="text-[11px] text-slate-400">99.98% instant transaction settlement.</p>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-pearl border border-slate-100 hover:border-gold-300 transition">
+                    <div class="w-12 h-12 rounded-full bg-gold-50 text-gold-700 flex items-center justify-center font-bold mx-auto mb-3 text-lg">👥</div>
+                    <h4 class="font-bold text-slate-900 text-sm mb-1">Customer Centric</h4>
+                    <p class="text-[11px] text-slate-400">Doorstep field officer guidance.</p>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-pearl border border-slate-100 hover:border-gold-300 transition">
+                    <div class="w-12 h-12 rounded-full bg-gold-50 text-gold-700 flex items-center justify-center font-bold mx-auto mb-3 text-lg">🛡</div>
+                    <h4 class="font-bold text-slate-900 text-sm mb-1">Reliability</h4>
+                    <p class="text-[11px] text-slate-400">Secure wallet and immediate settlement.</p>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-pearl border border-slate-100 hover:border-gold-300 transition">
+                    <div class="w-12 h-12 rounded-full bg-gold-50 text-gold-700 flex items-center justify-center font-bold mx-auto mb-3 text-lg">📦</div>
+                    <h4 class="font-bold text-slate-900 text-sm mb-1">Comprehensive Suite</h4>
+                    <p class="text-[11px] text-slate-400">50+ multi-utilities under one roof.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Income Calculator (MOS World Reference Feature) -->
+    <section id="calculator" class="py-24 bg-pearl border-b border-slate-200/60">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-12 space-y-3">
+                <span class="text-xs uppercase tracking-[0.3em] font-bold text-gold-600 block">Transparent Business Growth</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
+                    Agent Income Calculator
+                </h2>
+                <p class="text-slate-600 text-sm max-w-xl mx-auto">
+                    Simulate your projected monthly earnings based on average daily transactions performed at your counter.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-3xl border border-gold-200/90 p-8 sm:p-12 shadow-luxury">
                 <div class="grid md:grid-cols-12 gap-8 items-center">
-                    <!-- Left Inputs -->
-                    <div class="md:col-span-7 space-y-8">
+                    
+                    <!-- Left: Sliders -->
+                    <div class="md:col-span-7 space-y-6">
+                        
+                        <!-- AEPS / ATM Transactions Slider -->
                         <div>
                             <div class="flex justify-between items-center mb-2">
-                                <label class="text-xs uppercase tracking-wider font-bold text-stone-700">Initial Family Capital (USD)</label>
-                                <span id="legacyDisplay" class="font-serif text-2xl font-bold text-imperial-700">$10,000,000</span>
+                                <label class="text-xs uppercase tracking-wider font-bold text-slate-700">Daily Cash Withdrawals (AEPS / M-ATM)</label>
+                                <span id="aepsDisplay" class="font-mono text-sm font-bold text-gold-700">20 / day</span>
                             </div>
-                            <input id="legacySlider" type="range" min="2000000" max="100000000" step="1000000" value="10000000" class="w-full h-2.5 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-imperial-500">
-                            <div class="flex justify-between text-[11px] text-stone-400 mt-2 font-mono">
-                                <span>$2,000,000</span>
-                                <span>$50,000,000</span>
-                                <span>$100,000,000+</span>
+                            <input id="aepsSlider" type="range" min="0" max="100" step="5" value="20" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-gold-500">
+                            <div class="flex justify-between text-[10px] text-slate-400 mt-1 font-mono">
+                                <span>0</span>
+                                <span>50</span>
+                                <span>100+</span>
                             </div>
                         </div>
 
+                        <!-- Money Transfers Slider -->
                         <div>
                             <div class="flex justify-between items-center mb-2">
-                                <label class="text-xs uppercase tracking-wider font-bold text-stone-700">Generational Horizon</label>
-                                <span id="timelineDisplay" class="text-xs font-semibold text-stone-800 bg-stone-100 px-3 py-1 rounded-full">25 Years (Next Generation)</span>
+                                <label class="text-xs uppercase tracking-wider font-bold text-slate-700">Daily Money Transfers (DMT)</label>
+                                <span id="dmtDisplay" class="font-mono text-sm font-bold text-gold-700">15 / day</span>
                             </div>
-                            <div class="grid grid-cols-3 gap-3">
-                                <button onclick="setTimeline(10)" id="time10" class="time-btn py-2.5 px-2 text-xs font-semibold rounded-lg border border-stone-200 bg-white text-stone-600 hover:border-imperial-400 transition">
-                                    10 Years
-                                </button>
-                                <button onclick="setTimeline(25)" id="time25" class="time-btn py-2.5 px-2 text-xs font-semibold rounded-lg border border-imperial-500 bg-imperial-50 text-imperial-900 transition">
-                                    25 Years (Gen 2)
-                                </button>
-                                <button onclick="setTimeline(50)" id="time50" class="time-btn py-2.5 px-2 text-xs font-semibold rounded-lg border border-stone-200 bg-white text-stone-600 hover:border-imperial-400 transition">
-                                    50 Years (Dynasty)
-                                </button>
+                            <input id="dmtSlider" type="range" min="0" max="80" step="5" value="15" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-gold-500">
+                            <div class="flex justify-between text-[10px] text-slate-400 mt-1 font-mono">
+                                <span>0</span>
+                                <span>40</span>
+                                <span>80+</span>
                             </div>
                         </div>
+
+                        <!-- Bill & Utility Payments Slider -->
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-xs uppercase tracking-wider font-bold text-slate-700">Daily Bill Payments & Recharges (BBPS)</label>
+                                <span id="bbpsDisplay" class="font-mono text-sm font-bold text-gold-700">30 / day</span>
+                            </div>
+                            <input id="bbpsSlider" type="range" min="0" max="150" step="10" value="30" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-gold-500">
+                            <div class="flex justify-between text-[10px] text-slate-400 mt-1 font-mono">
+                                <span>0</span>
+                                <span>75</span>
+                                <span>150+</span>
+                            </div>
+                        </div>
+
+                        <!-- Tickets / IRCTC Slider -->
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-xs uppercase tracking-wider font-bold text-slate-700">Daily Rail / Flight / Bus Bookings</label>
+                                <span id="travelDisplay" class="font-mono text-sm font-bold text-gold-700">5 / day</span>
+                            </div>
+                            <input id="travelSlider" type="range" min="0" max="30" step="2" value="5" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-gold-500">
+                            <div class="flex justify-between text-[10px] text-slate-400 mt-1 font-mono">
+                                <span>0</span>
+                                <span>15</span>
+                                <span>30+</span>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <!-- Right Projected Results -->
-                    <div class="md:col-span-5 bg-stone-950 text-white p-7 rounded-2xl border border-imperial-400/50 space-y-6">
+                    <!-- Right: Results Card (Luxurious White & Gold Theme) -->
+                    <div class="md:col-span-5 bg-gradient-to-br from-gold-50 via-white to-gold-100/50 p-7 rounded-2xl border-2 border-gold-300 shadow-md space-y-6">
                         <div>
-                            <span class="text-[10px] uppercase tracking-widest text-imperial-300 block font-semibold">PROJECTED DYNASTIC ESTATE</span>
-                            <span id="projectedEstateDisplay" class="font-serif text-3xl sm:text-4xl font-bold text-white block mt-1">$68,484,750</span>
-                            <span class="text-[11px] text-stone-400">Assuming 8.0% conservative blended annual compounding</span>
+                            <span class="text-[10px] uppercase tracking-widest text-gold-700 block font-bold">ESTIMATED MONTHLY COMMISSION</span>
+                            <span id="monthlyIncomeDisplay" class="text-3xl sm:text-4xl font-extrabold text-slate-900 block mt-1">₹31,500</span>
+                            <span class="text-[11px] text-slate-500">Directly settled to your registered bank account</span>
                         </div>
 
-                        <div class="pt-4 border-t border-stone-800 space-y-2.5 text-xs">
+                        <div class="pt-4 border-t border-gold-200/80 space-y-2.5 text-xs">
                             <div class="flex justify-between">
-                                <span class="text-stone-400">Estimated Gain:</span>
-                                <span id="gainDisplay" class="font-mono font-bold text-emerald-400">+$58,484,750</span>
+                                <span class="text-slate-600">Annual Projected Income:</span>
+                                <span id="annualIncomeDisplay" class="font-mono font-bold text-gold-800">₹3,78,000 / yr</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-stone-400">Trust Probate Protection:</span>
-                                <span class="text-imperial-300 font-medium">100% Insulated</span>
+                                <span class="text-slate-600">Settlement Timeline:</span>
+                                <span class="text-emerald-700 font-bold">Instant (T+0)</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-stone-400">Generational Governance:</span>
-                                <span class="text-stone-200">Deed Sealed</span>
+                                <span class="text-slate-600">Parent Backing:</span>
+                                <span class="text-slate-900 font-semibold">Tekchandji Enterprise</span>
                             </div>
                         </div>
 
-                        <button onclick="openConsultationModal()" class="w-full py-3 rounded-lg gold-leaf text-stone-950 font-bold text-xs uppercase tracking-widest hover:brightness-105 transition">
-                            Structure Your Estate Trust
+                        <button onclick="openApplyModal('From Income Calculator')" class="w-full py-3.5 rounded-lg gold-gradient-bg text-slate-950 font-bold text-xs uppercase tracking-widest hover:brightness-105 transition shadow">
+                            Start Earning Today
                         </button>
                     </div>
+
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Heritage Trust & Compliance -->
-    <section id="trust" class="py-24 bg-white border-b border-stone-200/60">
+    <!-- Institutional Partners Section (MOS World Reference) -->
+    <section class="py-14 bg-white border-b border-slate-200/60">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-5 space-y-4">
-                    <span class="text-xs uppercase tracking-[0.3em] font-bold text-imperial-600 block">The Ironclad Standard</span>
-                    <h2 class="font-serif text-4xl font-bold text-stone-900">
-                        Uncompromising Fiduciary Sanctity
-                    </h2>
-                    <p class="text-stone-600 text-sm leading-relaxed">
-                        At Tekchandji, family assets are never commingled. Every client entity holds dedicated statutory trust custody with legal separation recognized under common law and Swiss civil codes.
-                    </p>
-                </div>
-
-                <div class="lg:col-span-7 grid sm:grid-cols-2 gap-6">
-                    <div class="border border-stone-200 rounded-xl p-6 bg-alabaster">
-                        <div class="w-10 h-10 rounded-full bg-imperial-100 text-imperial-800 flex items-center justify-center font-serif font-bold text-lg mb-4">
-                            §
-                        </div>
-                        <h4 class="font-serif font-bold text-stone-900 text-lg mb-1">Bankruptcy-Protected Trusts</h4>
-                        <p class="text-xs text-stone-500 leading-relaxed">
-                            Independent trust charters completely immune to systemic commercial banking insolvencies.
-                        </p>
-                    </div>
-
-                    <div class="border border-stone-200 rounded-xl p-6 bg-alabaster">
-                        <div class="w-10 h-10 rounded-full bg-imperial-100 text-imperial-800 flex items-center justify-center font-serif font-bold text-lg mb-4">
-                            Au
-                        </div>
-                        <h4 class="font-serif font-bold text-stone-900 text-lg mb-1">Allocated Physical Bullion</h4>
-                        <p class="text-xs text-stone-500 leading-relaxed">
-                            Serialized, London Bullion Market Association (LBMA) approved gold bars in deep alpine vaults.
-                        </p>
-                    </div>
-
-                    <div class="border border-stone-200 rounded-xl p-6 bg-alabaster">
-                        <div class="w-10 h-10 rounded-full bg-imperial-100 text-imperial-800 flex items-center justify-center font-serif font-bold text-lg mb-4">
-                            24
-                        </div>
-                        <h4 class="font-serif font-bold text-stone-900 text-lg mb-1">Direct Family Diwan Desk</h4>
-                        <p class="text-xs text-stone-500 leading-relaxed">
-                            A designated senior partner accessible 24/7/365 without call centers or automated attendants.
-                        </p>
-                    </div>
-
-                    <div class="border border-stone-200 rounded-xl p-6 bg-alabaster">
-                        <div class="w-10 h-10 rounded-full bg-imperial-100 text-imperial-800 flex items-center justify-center font-serif font-bold text-lg mb-4">
-                            🛡
-                        </div>
-                        <h4 class="font-serif font-bold text-stone-900 text-lg mb-1">Encrypted Merchant Rails</h4>
-                        <p class="text-xs text-stone-500 leading-relaxed">
-                            Cryptographically certified multi-sig release protocols with biometric physical verification.
-                        </p>
-                    </div>
-                </div>
+            <p class="text-center text-[11px] uppercase tracking-[0.3em] font-bold text-slate-400 mb-8">
+                Official Strategic Alliances & Institutional Partners
+            </p>
+            <div class="flex flex-wrap justify-center items-center gap-10 md:gap-14 text-slate-700 font-serif font-bold text-sm tracking-wider opacity-80">
+                <span class="hover:text-gold-600 transition">IRCTC RAILWAYS</span>
+                <span class="hover:text-gold-600 transition">BHARAT BILLPAY (NPCI)</span>
+                <span class="hover:text-gold-600 transition">NSDL PAYMENTS BANK</span>
+                <span class="hover:text-gold-600 transition">ICICI BANK</span>
+                <span class="hover:text-gold-600 transition">AXIS BANK</span>
+                <span class="hover:text-gold-600 transition">AIR INDIA</span>
+                <span class="hover:text-gold-600 transition">INDIGO</span>
+                <span class="hover:text-gold-600 transition">SPICEJET</span>
             </div>
         </div>
     </section>
 
-    <!-- Testimonial Quote -->
-    <section class="py-24 bg-alabaster border-b border-stone-200/60">
-        <div class="max-w-4xl mx-auto px-6 text-center space-y-8">
-            <span class="text-xs uppercase tracking-[0.3em] font-bold text-imperial-600 block">Patron Testimonial</span>
-            <div class="font-serif text-3xl font-medium text-stone-900 italic leading-relaxed">
-                "Tekchandji has stewarded our family’s merchant holdings across Mumbai and London for over two decades. Their fusion of traditional honour and lightning-fast digital liquidity is unmatched."
+    <!-- Client / Partner Testimonial -->
+    <section class="py-20 bg-pearl border-b border-slate-200/60">
+        <div class="max-w-4xl mx-auto px-6 text-center space-y-6">
+            <span class="text-xs uppercase tracking-[0.3em] font-bold text-gold-600 block">Hear From Our Partners</span>
+            <div class="text-2xl sm:text-3xl font-medium text-slate-900 italic leading-relaxed">
+                "HunarPay transformed my small mobile recharge shop into the busiest digital banking center in my town. With the backing of Tekchandji, customer trust was instant, and my monthly income has doubled."
             </div>
             <div>
-                <span class="font-serif font-bold text-stone-900 block text-lg">Dewan Vikramaditya Singhania</span>
-                <span class="text-xs text-stone-500 uppercase tracking-widest">Trustee, Singhania Heritage Conglomerate</span>
+                <span class="font-bold text-slate-900 block text-lg">Kaashinath Chauhan</span>
+                <span class="text-xs text-slate-500 uppercase tracking-widest">Master Distributor, HunarPay (Pune, Maharashtra)</span>
             </div>
         </div>
     </section>
 
-    <!-- Invitation CTA -->
+    <!-- Main Call to Action -->
     <section class="py-24 bg-white relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-6 text-center space-y-8 relative z-10">
-            <div class="w-16 h-16 rounded-full gold-leaf mx-auto flex items-center justify-center shadow-lg">
-                <span class="font-serif font-bold text-3xl text-stone-950 italic">T</span>
+            <div class="w-16 h-16 rounded-2xl gold-gradient-bg mx-auto flex items-center justify-center shadow-lg">
+                <span class="font-bold text-2xl text-slate-950">H</span>
             </div>
-            <h2 class="font-serif text-4xl sm:text-5xl font-bold text-stone-900">
-                Initiate A Confidential Dialogue
+            <h2 class="text-4xl sm:text-5xl font-extrabold text-slate-900">
+                Join HunarPay Today
             </h2>
-            <p class="text-stone-600 max-w-xl mx-auto text-base">
-                Engagements with Tekchandji begin with a confidential private audience with our managing partners.
+            <p class="text-slate-600 max-w-xl mx-auto text-base">
+                Take the leap towards digital entrepreneurship with the trusted backing of Tekchandji. Become a HunarPay agent, distributor, or setup your exclusive Seva Kendra.
             </p>
-            <div>
-                <button onclick="openConsultationModal()" class="px-10 py-5 rounded-full gold-leaf text-stone-950 font-bold text-xs uppercase tracking-widest shadow-gilded hover:scale-105 transition duration-300">
-                    Schedule Private Consultation
+            <div class="flex flex-wrap justify-center gap-4">
+                <button onclick="openApplyModal('Direct Signup CTA')" class="px-9 py-4 rounded-xl gold-gradient-bg text-slate-950 font-bold text-xs uppercase tracking-widest shadow-luxury hover:scale-105 transition duration-300">
+                    Apply Now for Partnership
+                </button>
+                <button onclick="openLoginModal()" class="px-8 py-4 rounded-xl border border-slate-300 text-slate-800 font-bold text-xs uppercase tracking-wider hover:bg-slate-50 transition shadow-sm">
+                    Existing Partner Login
                 </button>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-stone-200 text-stone-500 text-xs py-16">
+    <footer class="bg-white border-t border-slate-200 text-slate-500 text-xs py-16">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
+            
             <div class="space-y-4">
                 <div class="flex items-center gap-2">
-                    <span class="font-serif font-bold text-lg text-stone-900 tracking-wider">TEKCHANDJI</span>
+                    <span class="font-extrabold text-xl text-slate-900">Hunar<span class="text-gold-600">Pay</span></span>
                 </div>
-                <p class="text-[11px] leading-relaxed text-stone-400">
-                    Merchant banking, generational estate structuring, and multi-asset liquidity for distinguished families and institutional principals.
+                <p class="text-[11px] leading-relaxed text-slate-400">
+                    <strong>HunarPay</strong> is a leading digital fintech and assisted e-commerce network. A proud enterprise of the <strong>Tekchandji Group</strong>.
                 </p>
-                <div class="text-[10px] text-stone-400">
-                    © 2026 Tekchandji Private Merchant Bank Ltd. All rights reserved.
+                <div class="text-[10px] text-slate-400">
+                    © 2026 HunarPay (A Tekchandji Enterprise). All rights reserved.
                 </div>
             </div>
 
             <div>
-                <span class="font-serif font-bold text-stone-900 block mb-4 uppercase tracking-wider text-xs">Family Desks</span>
+                <span class="font-bold text-slate-900 block mb-4 uppercase tracking-wider text-xs">Services</span>
                 <ul class="space-y-2 text-[11px]">
-                    <li>Mumbai: Nariman Point & BKC</li>
-                    <li>London: Berkeley Square, Mayfair</li>
-                    <li>Dubai: Gate Precinct, DIFC</li>
-                    <li>Geneva: Rue du Rhône</li>
+                    <li><a href="#services" class="hover:text-gold-600 transition">AEPS & Micro-ATM Banking</a></li>
+                    <li><a href="#services" class="hover:text-gold-600 transition">IRCTC Railway & Flight Ticketing</a></li>
+                    <li><a href="#services" class="hover:text-gold-600 transition">Bharat BillPay (BBPS) Utilities</a></li>
+                    <li><a href="#services" class="hover:text-gold-600 transition">Motor & Health Insurance</a></li>
+                    <li><a href="#services" class="hover:text-gold-600 transition">Pan-India Courier & Cargo</a></li>
                 </ul>
             </div>
 
             <div>
-                <span class="font-serif font-bold text-stone-900 block mb-4 uppercase tracking-wider text-xs">Divisions</span>
+                <span class="font-bold text-slate-900 block mb-4 uppercase tracking-wider text-xs">Partnership</span>
                 <ul class="space-y-2 text-[11px]">
-                    <li><a href="#services" class="hover:text-imperial-700 transition">Merchant Escrow Services</a></li>
-                    <li><a href="#services" class="hover:text-imperial-700 transition">Generational Trust Planning</a></li>
-                    <li><a href="#imperial-card" class="hover:text-imperial-700 transition">24K Gold Imperial Card</a></li>
-                    <li><a href="#calculator" class="hover:text-imperial-700 transition">Dynastic Wealth Calculator</a></li>
+                    <li><a href="#seva-kendra" class="hover:text-gold-600 transition">HunarPay Seva Kendra (HSK)</a></li>
+                    <li><a href="#partnerships" class="hover:text-gold-600 transition">Become a HunarPay Agent</a></li>
+                    <li><a href="#partnerships" class="hover:text-gold-600 transition">Distributor Opportunity</a></li>
+                    <li><a href="#partnerships" class="hover:text-gold-600 transition">Master Distributor</a></li>
+                    <li><a href="#calculator" class="hover:text-gold-600 transition">Income Calculator</a></li>
                 </ul>
             </div>
 
             <div>
-                <span class="font-serif font-bold text-stone-900 block mb-4 uppercase tracking-wider text-xs">Fiduciary Disclosure</span>
-                <p class="text-[10px] leading-relaxed text-stone-400">
-                    Tekchandji operates as a private merchant trust and fiduciary services company. Banking relationships and clearing facilities are maintained through regulated statutory custodians in relevant sovereign jurisdictions.
+                <span class="font-bold text-slate-900 block mb-4 uppercase tracking-wider text-xs">Parent & Contact</span>
+                <p class="text-[11px] text-slate-400 leading-relaxed mb-3">
+                    Corporate Entity: HunarPay, A Tekchandji Enterprise.<br>
+                    Tekchandji Corporate Complex, Mumbai – 400051.
+                </p>
+                <p class="text-[10px] text-slate-400 leading-relaxed">
+                    Helpline: 1800-419-8800 | support@hunarpay.com
                 </p>
             </div>
+
         </div>
     </footer>
 
-    <!-- Interactive Consultation Modal -->
-    <div id="consultationModal" class="fixed inset-0 bg-stone-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-lg w-full border border-imperial-300 p-8 shadow-2xl relative">
-            <button onclick="closeConsultationModal()" class="absolute top-5 right-5 text-stone-400 hover:text-stone-800 text-xl font-bold">✕</button>
-            <div class="mb-6">
-                <span class="text-xs uppercase tracking-widest font-bold text-imperial-600 block">Confidential Enquiry</span>
-                <h3 class="font-serif text-3xl font-bold text-stone-900 mt-1">Request Private Audience</h3>
-                <p class="text-xs text-stone-500 mt-1">Your details remain strictly privileged and protected under statutory confidentiality.</p>
+    <!-- Interactive Registration / Application Modal -->
+    <div id="applyModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full border border-gold-200 p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeApplyModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-800 text-xl font-bold">✕</button>
+            <div class="mb-5">
+                <span class="text-xs uppercase tracking-widest font-bold text-gold-600 block">A Tekchandji Enterprise</span>
+                <h3 class="text-2xl font-bold text-slate-900 mt-1">Join HunarPay Today</h3>
+                <p class="text-xs text-slate-500 mt-1">Complete your registration to unlock 50+ digital services for your business.</p>
             </div>
-            <form onsubmit="handleConsultationSubmit(event)" class="space-y-4 text-xs">
+
+            <form onsubmit="handleApplySubmit(event)" class="space-y-4 text-xs">
                 <div>
-                    <label class="block font-semibold text-stone-700 uppercase mb-1">Full Name & Family Office Title</label>
-                    <input type="text" required class="w-full px-3.5 py-2.5 rounded-lg border border-stone-200 focus:border-imperial-500 focus:ring-1 focus:ring-imperial-500 outline-none text-stone-900" placeholder="e.g. Yashvardhan Singhania / Managing Trustee">
+                    <label class="block font-semibold text-slate-700 uppercase mb-1">Full Name</label>
+                    <input type="text" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none text-slate-900" placeholder="e.g. Ramesh Kumar Patel">
                 </div>
-                <div>
-                    <label class="block font-semibold text-stone-700 uppercase mb-1">Direct Contact Email</label>
-                    <input type="email" required class="w-full px-3.5 py-2.5 rounded-lg border border-stone-200 focus:border-imperial-500 focus:ring-1 focus:ring-imperial-500 outline-none text-stone-900" placeholder="trustee@familyoffice.com">
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-semibold text-slate-700 uppercase mb-1">Mobile / WhatsApp No.</label>
+                        <input type="tel" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none text-slate-900" placeholder="9876543210">
+                    </div>
+                    <div>
+                        <label class="block font-semibold text-slate-700 uppercase mb-1">Email Address</label>
+                        <input type="email" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none text-slate-900" placeholder="ramesh@store.com">
+                    </div>
                 </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-semibold text-slate-700 uppercase mb-1">State</label>
+                        <select class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 outline-none text-slate-900">
+                            <option>Maharashtra</option>
+                            <option>Gujarat</option>
+                            <option>Uttar Pradesh</option>
+                            <option>Bihar</option>
+                            <option>Rajasthan</option>
+                            <option>Madhya Pradesh</option>
+                            <option>West Bengal</option>
+                            <option>Delhi NCR</option>
+                            <option>Karnataka</option>
+                            <option>Other States</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-semibold text-slate-700 uppercase mb-1">Pin Code</label>
+                        <input type="text" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 outline-none text-slate-900" placeholder="e.g. 400001">
+                    </div>
+                </div>
+
                 <div>
-                    <label class="block font-semibold text-stone-700 uppercase mb-1">Asset Band Under Consideration</label>
-                    <select class="w-full px-3.5 py-2.5 rounded-lg border border-stone-200 focus:border-imperial-500 focus:ring-1 focus:ring-imperial-500 outline-none text-stone-900">
-                        <option>$5,000,000 - $25,000,000 USD</option>
-                        <option>$25,000,000 - $100,000,000 USD</option>
-                        <option>$100,000,000+ USD (Dynastic Tier)</option>
+                    <label class="block font-semibold text-slate-700 uppercase mb-1">Interested In Role</label>
+                    <select id="roleSelect" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 outline-none text-slate-900">
+                        <option>HunarPay Agent</option>
+                        <option>HunarPay Seva Kendra (Exclusive Franchise)</option>
+                        <option>HunarPay Distributor</option>
+                        <option>HunarPay Master Distributor</option>
                     </select>
                 </div>
+
                 <div>
-                    <label class="block font-semibold text-stone-700 uppercase mb-1">Primary Area of Interest</label>
-                    <select class="w-full px-3.5 py-2.5 rounded-lg border border-stone-200 focus:border-imperial-500 focus:ring-1 focus:ring-imperial-500 outline-none text-stone-900">
-                        <option>Generational Trust & Succession</option>
-                        <option>Cross-Border Merchant Escrow & Liquidity</option>
-                        <option>Allocated Physical Bullion Storage</option>
-                        <option>Imperial Card Allocation</option>
+                    <label class="block font-semibold text-slate-700 uppercase mb-1">Your Store / Business Type</label>
+                    <select class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 outline-none text-slate-900">
+                        <option>Kirana / Grocery Store</option>
+                        <option>Mobile Recharge & Electronics</option>
+                        <option>Medical Store / Chemist</option>
+                        <option>Cyber Cafe / Stationery</option>
+                        <option>Travel Agency</option>
+                        <option>Student / Housewife / New Entrepreneur</option>
                     </select>
                 </div>
+
                 <div class="pt-2">
-                    <button type="submit" class="w-full py-3.5 rounded-full gold-leaf text-stone-950 font-bold uppercase tracking-wider text-xs hover:brightness-105 transition shadow-md">
-                        Transmit Privileged Request
+                    <button type="submit" class="w-full py-3.5 rounded-lg gold-gradient-bg text-slate-950 font-bold uppercase tracking-wider text-xs hover:brightness-105 transition shadow-md">
+                        Submit Application
                     </button>
                 </div>
             </form>
         </div>
     </div>
 
-    <!-- Diwan Portal Modal -->
-    <div id="diwanModal" class="fixed inset-0 bg-stone-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-sm w-full border border-imperial-300 p-8 shadow-2xl relative text-center">
-            <button onclick="closeDiwanModal()" class="absolute top-4 right-4 text-stone-400 hover:text-stone-800 text-lg">✕</button>
-            <div class="w-12 h-12 rounded-full bg-imperial-100 border border-imperial-300 mx-auto flex items-center justify-center text-imperial-700 mb-4 font-serif font-bold text-xl">
-                T
+    <!-- Partner Login Modal -->
+    <div id="loginModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-sm w-full border border-gold-200 p-8 shadow-2xl relative text-center">
+            <button onclick="closeLoginModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-800 text-lg">✕</button>
+            <div class="w-12 h-12 rounded-xl bg-gold-50 border border-gold-300 mx-auto flex items-center justify-center text-gold-700 mb-4 font-bold text-xl">
+                H
             </div>
-            <h3 class="font-serif text-2xl font-bold text-stone-900">Diwan Client Portal</h3>
-            <p class="text-xs text-stone-500 mt-2 mb-6">Enter your family office secure cryptographic passphrase or biometric auth.</p>
-            <button onclick="alert('Tekchandji Diwan Gateway: Biometric handshake completed successfully.')" class="w-full py-2.5 rounded-full gold-leaf text-stone-950 font-bold text-xs uppercase tracking-wider transition">
-                Authenticate Session
-            </button>
+            <h3 class="text-xl font-bold text-slate-900">HunarPay Partner Login</h3>
+            <p class="text-xs text-slate-500 mt-1 mb-5">Login with your Registered Mobile / User ID</p>
+
+            <form onsubmit="handleLoginSubmit(event)" class="space-y-3 text-xs text-left">
+                <div>
+                    <label class="block font-semibold text-slate-700 uppercase mb-1">User ID / Mobile</label>
+                    <input type="text" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 outline-none text-slate-900" placeholder="e.g. HP889201">
+                </div>
+                <div>
+                    <label class="block font-semibold text-slate-700 uppercase mb-1">Password</label>
+                    <input type="password" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-gold-500 outline-none text-slate-900" placeholder="••••••••">
+                </div>
+                <button type="submit" class="w-full py-2.5 rounded-lg gold-gradient-bg text-slate-950 font-bold text-xs uppercase tracking-wider hover:brightness-105 transition mt-2">
+                    Sign In to Portal
+                </button>
+            </form>
         </div>
     </div>
 
     <!-- Toast Notification -->
-    <div id="toast" class="fixed bottom-6 right-6 bg-stone-900 text-white px-5 py-3 rounded-xl shadow-2xl border border-imperial-400/50 hidden flex items-center gap-3 text-xs z-50">
+    <div id="toast" class="fixed bottom-6 right-6 bg-slate-900 text-white px-5 py-3 rounded-xl shadow-2xl border border-gold-400/50 hidden flex items-center gap-3 text-xs z-50">
         <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-        <span>Audience Request Received. The Managing Partner’s desk will make direct contact.</span>
+        <span id="toastMsg">Application Received. A HunarPay executive will call you shortly.</span>
     </div>
 
-    <!-- Scripts -->
+    <!-- Interactive Scripts for Calculator and Modals -->
     <script>
-        function openConsultationModal() {
-            document.getElementById('consultationModal').classList.remove('hidden');
+        function openApplyModal(role) {
+            document.getElementById('applyModal').classList.remove('hidden');
+            if (role) {
+                const select = document.getElementById('roleSelect');
+                for (let i = 0; i < select.options.length; i++) {
+                    if (select.options[i].text.toLowerCase().includes(role.toLowerCase())) {
+                        select.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
         }
-        function closeConsultationModal() {
-            document.getElementById('consultationModal').classList.add('hidden');
+        function closeApplyModal() {
+            document.getElementById('applyModal').classList.add('hidden');
         }
-        function openDiwanModal() {
-            document.getElementById('diwanModal').classList.remove('hidden');
+        function openLoginModal() {
+            document.getElementById('loginModal').classList.remove('hidden');
         }
-        function closeDiwanModal() {
-            document.getElementById('diwanModal').classList.add('hidden');
+        function closeLoginModal() {
+            document.getElementById('loginModal').classList.add('hidden');
         }
 
-        function handleConsultationSubmit(e) {
+        function handleApplySubmit(e) {
             e.preventDefault();
-            closeConsultationModal();
+            closeApplyModal();
+            showToast("Application submitted successfully! Our representative will call you within 2 business hours.");
+        }
+
+        function handleLoginSubmit(e) {
+            e.preventDefault();
+            closeLoginModal();
+            showToast("Redirecting to HunarPay Secure Partner Terminal...");
+        }
+
+        function showToast(msg) {
             const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').textContent = msg;
             toast.classList.remove('hidden');
             setTimeout(() => {
                 toast.classList.add('hidden');
             }, 4500);
         }
 
-        // Dynastic Calculator Logic
-        const legacySlider = document.getElementById('legacySlider');
-        const legacyDisplay = document.getElementById('legacyDisplay');
-        const projectedEstateDisplay = document.getElementById('projectedEstateDisplay');
-        const gainDisplay = document.getElementById('gainDisplay');
-        const timelineDisplay = document.getElementById('timelineDisplay');
+        // Calculator Logic
+        const aepsSlider = document.getElementById('aepsSlider');
+        const dmtSlider = document.getElementById('dmtSlider');
+        const bbpsSlider = document.getElementById('bbpsSlider');
+        const travelSlider = document.getElementById('travelSlider');
 
-        let selectedYears = 25;
-        const annualRate = 0.08; // 8% compound
+        const aepsDisplay = document.getElementById('aepsDisplay');
+        const dmtDisplay = document.getElementById('dmtDisplay');
+        const bbpsDisplay = document.getElementById('bbpsDisplay');
+        const travelDisplay = document.getElementById('travelDisplay');
 
-        function setTimeline(years) {
-            selectedYears = years;
-            document.querySelectorAll('.time-btn').forEach(b => {
-                b.className = 'time-btn py-2.5 px-2 text-xs font-semibold rounded-lg border border-stone-200 bg-white text-stone-600 hover:border-imperial-400 transition';
-            });
-            document.getElementById('time' + years).className = 'time-btn py-2.5 px-2 text-xs font-semibold rounded-lg border border-imperial-500 bg-imperial-50 text-imperial-900 transition';
-            
-            if (years === 10) timelineDisplay.textContent = '10 Years (Short-Term Estate)';
-            if (years === 25) timelineDisplay.textContent = '25 Years (Next Generation)';
-            if (years === 50) timelineDisplay.textContent = '50 Years (Dynasty Protocol)';
-            
-            updateLegacy();
+        const monthlyIncomeDisplay = document.getElementById('monthlyIncomeDisplay');
+        const annualIncomeDisplay = document.getElementById('annualIncomeDisplay');
+
+        function updateCalculator() {
+            const aepsCount = parseInt(aepsSlider.value, 10);
+            const dmtCount = parseInt(dmtSlider.value, 10);
+            const bbpsCount = parseInt(bbpsSlider.value, 10);
+            const travelCount = parseInt(travelSlider.value, 10);
+
+            aepsDisplay.textContent = aepsCount + ' / day';
+            dmtDisplay.textContent = dmtCount + ' / day';
+            bbpsDisplay.textContent = bbpsCount + ' / day';
+            travelDisplay.textContent = travelCount + ' / day';
+
+            // Commission estimations:
+            // AEPS: ~₹10 average per txn
+            // DMT: ~₹18 average per txn
+            // BBPS: ~₹3 average per bill/recharge
+            // Travel/IRCTC: ~₹45 average per ticket
+            const dailyIncome = (aepsCount * 10) + (dmtCount * 18) + (bbpsCount * 3) + (travelCount * 45);
+            const monthlyIncome = dailyIncome * 30;
+            const annualIncome = monthlyIncome * 12;
+
+            monthlyIncomeDisplay.textContent = '₹' + monthlyIncome.toLocaleString('en-IN');
+            annualIncomeDisplay.textContent = '₹' + annualIncome.toLocaleString('en-IN') + ' / yr';
         }
 
-        function updateLegacy() {
-            const principal = parseFloat(legacySlider.value);
-            legacyDisplay.textContent = '$' + principal.toLocaleString();
+        aepsSlider.addEventListener('input', updateCalculator);
+        dmtSlider.addEventListener('input', updateCalculator);
+        bbpsSlider.addEventListener('input', updateCalculator);
+        travelSlider.addEventListener('input', updateCalculator);
 
-            const finalAmount = principal * Math.pow((1 + annualRate), selectedYears);
-            const gain = finalAmount - principal;
-
-            projectedEstateDisplay.textContent = '$' + Math.round(finalAmount).toLocaleString();
-            gainDisplay.textContent = '+$' + Math.round(gain).toLocaleString();
-        }
-
-        legacySlider.addEventListener('input', updateLegacy);
-        updateLegacy();
+        updateCalculator();
     </script>
 </body>
 </html>
